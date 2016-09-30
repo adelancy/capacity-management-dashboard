@@ -1,5 +1,4 @@
 from marshmallow_jsonapi import Schema, fields
-from marshmallow_jsonapi.flask import Relationship
 
 
 class LocationSchema(Schema):
@@ -8,3 +7,7 @@ class LocationSchema(Schema):
     city = fields.String()
     region = fields.String()
     country = fields.String()
+
+    class Meta:
+        type_ = 'location'
+        strict = True

@@ -1,3 +1,4 @@
+from datetime import datetime
 from extensions.sql_alchemy import sqldb
 
 
@@ -7,8 +8,8 @@ class Location(sqldb.Model):
     city = sqldb.Column(sqldb.String)
     region = sqldb.Column(sqldb.String)
     country = sqldb.Column(sqldb.String)
-    deleted = sqldb.Column(sqldb.Boolean)
-    last_modified_dt = sqldb.Column(sqldb.DateTime)
+    deleted = sqldb.Column(sqldb.Boolean, default=False)
+    last_modified_dt = sqldb.Column(sqldb.DateTime, default=datetime.utcnow())
 
     def __repr__(self):
         return '<{0} name: {1}'.format(self.__class__.__name__, self.name)

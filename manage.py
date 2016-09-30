@@ -2,6 +2,8 @@ from flask_script import Manager, Server
 from app import create_app
 from extensions.sql_alchemy import sqldb
 
+import dbmodels.location as loc
+
 manager = Manager(create_app)
 server = Server(port=5000, use_debugger=True)
 manager.add_command("runserver", server)
@@ -16,6 +18,12 @@ def create_db():
 def clear_db():
     sqldb.drop_all()
 
+
+@manager.command
+def add_location():
+    location = loc.Location(city='Chicago', name='Chicago')
+    sqldb.session.add(location)
+    sqldb.session.commit()
 
 if __name__ == "__main__":
     manager.run()
