@@ -1,5 +1,7 @@
 import json
 from datetime import datetime
+
+from flask import request
 from flask_restful import Resource, reqparse
 from extensions.sql_alchemy import sqldb
 from dbmodels.location import Location
@@ -38,7 +40,7 @@ class LocationsCollection(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         self.add_post_patch_args(parser)
-        data = parser.parse_args()
+        data = self.parse_args(parser)
         db_record = self.db_table(**data)  # Todo: Add validation as necessary
         db_record.last_modified_dt = datetime.utcnow()
         sqldb.session.add(db_record)
@@ -49,7 +51,7 @@ class LocationsCollection(Resource):
     def patch(self, db_id):
         parser = reqparse.RequestParser()
         self.add_post_patch_args(parser)
-        data = parser.parse_args()
+        data = self.parse_args(parser)
         db_record = self.db_table.query.filter_by(id=db_id, deleted=False).first_or_404()
         for k, v in data.items():
             if k in self.special_fields:
@@ -75,6 +77,18 @@ class LocationsCollection(Resource):
         db_record = self.db_table.query.filter_by(id=db_id)\
             .filter(self.db_table.deleted.isnot(True)).first_or_404()
         return db_record
+
+    def parse_args(self, parser):
+        parser.add_argument('Content-Type', location='headers')
+        args = parser.parse_args()
+        content_type = args.pop('Content-Type')
+        try:
+            # Check whether the request is json api format
+            if content_type == 'application/vnd.api+json':
+                return self.resp_schema().loads(request.data)
+            raise TypeError
+        except TypeError:
+            return args  # Request is just encoded as normal form/json data
 
     def handle_special_fields(self, db_record, field, value, replace=False):
         """ Use to handle updating special fields such as relationships, labels, tags etc. Use the replace
