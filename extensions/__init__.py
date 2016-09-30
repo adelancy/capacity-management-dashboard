@@ -1,0 +1,1 @@
+from extensions import init_extensions
