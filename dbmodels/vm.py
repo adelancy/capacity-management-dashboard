@@ -1,4 +1,4 @@
-from extensions import sqldb
+from extensions.sql_alchemy import sqldb
 from location import Location  # Needed for relationship
 
 
@@ -8,11 +8,11 @@ class VM(sqldb.Model):
 
     id = sqldb.Column(sqldb.Integer, primary_key=True)
     hostname = sqldb.Column(sqldb.String)  # Data Center name or label
-    vcpu = sqldb.Column(sqldb.String)
-    ram = sqldb.Column(sqldb.String)
+    vcpu = sqldb.Column(sqldb.Integer)
+    ram = sqldb.Column(sqldb.Integer)
     group = sqldb.Column(sqldb.String)
-    storage = sqldb.Column(sqldb.String)
-    vmunit = sqldb.Column(sqldb.String)
+    storage = sqldb.Column(sqldb.Integer)
+    vmunit = sqldb.Column(sqldb.Integer)
     role = sqldb.Column(sqldb.String)
     environment = sqldb.Column(sqldb.String)
     cluster = sqldb.Column(sqldb.String)

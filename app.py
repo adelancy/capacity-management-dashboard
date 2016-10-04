@@ -9,7 +9,7 @@ def create_app(config_filename=None):
     init_extensions(app)
 
     if config_filename is not None:
-        app.config.from_pyfile(config_filename)
+        app.config.from_object(config_filename)
 
     return app
 
