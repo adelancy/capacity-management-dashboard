@@ -1,4 +1,4 @@
-from extensions import sqldb
+from extensions.sql_alchemy import sqldb
 from location import Location  # Needed for relationship
 
 
@@ -18,4 +18,4 @@ class License(sqldb.Model):
     location = sqldb.relationship('Location', backref=sqldb.backref('licenses', lazy='dynamic'))
 
     def __repr__(self):
-        return '<{0} name: {1}'.format(self.__class__.__name__, self.name)
+        return '<{0} name: {1}>'.format(self.__class__.__name__, self.name)

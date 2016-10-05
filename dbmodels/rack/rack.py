@@ -1,6 +1,5 @@
-from extensions import sqldb
-from dbmodels.location import Location  # Needed for relationship
-from join__rack_pdu import join__rack_pdu, PDU
+from extensions.sql_alchemy import sqldb
+from join__rack_pdu import join__rack_pdu
 
 
 class Rack(sqldb.Model):
@@ -8,7 +7,6 @@ class Rack(sqldb.Model):
     __tablename__ = 'rack'
 
     id = sqldb.Column(sqldb.Integer, primary_key=True)
-    hostname = sqldb.Column(sqldb.String)
     vendor = sqldb.Column(sqldb.String)
     model = sqldb.Column(sqldb.String)
     serial_number = sqldb.Column(sqldb.String)

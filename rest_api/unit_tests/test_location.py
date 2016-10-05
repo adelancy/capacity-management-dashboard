@@ -67,11 +67,11 @@ class TestLocationCollection(TestCase):
         }
 
         headers = {
-            'Content-Type': 'application/vnd.api+json'
+            'Content-Type': 'application/vnd.api+json;charset=utf8'
         }
 
         resp = self.client.post(url_for('vms-collection'), data=json.dumps(data), headers=headers)
-        print resp.data
+        # print resp.data
         self.assertStatus(resp, 201)
 
 if __name__ == '__main__':
