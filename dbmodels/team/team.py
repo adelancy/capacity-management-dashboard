@@ -4,7 +4,7 @@ from extensions.sql_alchemy import sqldb
 class Team(sqldb.Model):
     __tablename__ = 'team'
     id = sqldb.Column(sqldb.Integer(), primary_key=True)
-    name = sqldb.Column(sqldb.String(50))
+    name = sqldb.Column(sqldb.String(50), unique=True)
     group = sqldb.Column(sqldb.String(50))
     description = sqldb.Column(sqldb.Text())
 

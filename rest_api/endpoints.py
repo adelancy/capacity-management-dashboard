@@ -3,6 +3,7 @@ import resources.vms
 import resources.licenses
 import resources.outlets
 import resources.racks
+import resources.team
 
 PREFIX = 'data'
 
@@ -55,5 +56,26 @@ def add_restful_endpoints(api):
         '/{0}/rack-units'.format(PREFIX),
         '/{0}/rack-units/<db_id>'.format(PREFIX),
         endpoint='rack-units-collection'
+    )
+
+    api.add_resource(
+            resources.team.TeamCollection,
+            '/{0}/teams'.format(PREFIX),
+            '/{0}/teams/<db_id>'.format(PREFIX),
+            endpoint='teams-collection'
+        )
+
+    api.add_resource(
+        resources.team.VMRequirementsCollection,
+        '/{0}/vm-req'.format(PREFIX),
+        '/{0}/vm-req/<db_id>'.format(PREFIX),
+        endpoint='vm-reqs-collection'
+    )
+
+    api.add_resource(
+        resources.team.BMRequirementsCollection,
+        '/{0}/bm-req'.format(PREFIX),
+        '/{0}/bm-req/<db_id>'.format(PREFIX),
+        endpoint='bm-reqs-collection'
     )
 

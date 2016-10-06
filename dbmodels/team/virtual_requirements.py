@@ -12,12 +12,17 @@ class VirtualRequirement(sqldb.Model):
     ram = sqldb.Column(sqldb.Integer())
     vmunits = sqldb.Column(sqldb.Integer())
     description = sqldb.Column(sqldb.Text())
+    env = sqldb.Column(sqldb.String(50))
 
     team_id = sqldb.Column(sqldb.Integer(), sqldb.ForeignKey('team.id'))
     team = sqldb.relationship(
         'Team',
         backref=sqldb.backref('virtual_requirements', lazy='dynamic')
     )
+
+    # Many to One Relationship with Location Table
+    location_id = sqldb.Column(sqldb.Integer, sqldb.ForeignKey('location.id'))
+    location = sqldb.relationship('Location', backref=sqldb.backref('vm_reqs', lazy='dynamic'))
 
     def __repr__(self):
         return '<{0} {1}'.format(self.__class__.__name__, self.id)

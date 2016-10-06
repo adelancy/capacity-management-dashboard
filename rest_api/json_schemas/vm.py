@@ -1,6 +1,7 @@
 from marshmallow_jsonapi import Schema, fields
 from marshmallow_jsonapi.flask import Relationship
 from location import LocationSchema
+from rest_api.util import dasherize
 
 
 class VMSchema(Schema):
@@ -22,3 +23,4 @@ class VMSchema(Schema):
     class Meta:
         type_ = 'vm'
         strict = True
+        inflect = dasherize

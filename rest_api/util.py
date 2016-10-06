@@ -17,3 +17,7 @@ def handle_rest_error_response(error, api_name=None, status_code=500, code=None,
     resp = make_response(json.dumps(error_resp), 500)
     resp.headers.extend(headers or {})
     return resp
+
+
+def dasherize(text):
+    return text.replace('_', '-')
