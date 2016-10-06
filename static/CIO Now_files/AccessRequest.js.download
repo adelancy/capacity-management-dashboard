@@ -1,0 +1,393 @@
+﻿var timeKeyUp = 0;
+var peopleAdded = [];
+var peopleStackedOnList = [];
+var currentFields = 0;
+var lastInputMade = "";
+var validationMessage = "";
+
+//Show IDs list SetUp
+
+$(document).ready(function () {
+
+    if (window.webshims) {
+        webshims.setOptions('forms', {
+            customDatalist: true
+        });
+        webshims.polyfill('forms');
+    }
+
+    $(document).keypress(function (e) {
+        if (e.keyCode == 13) {
+            e.preventDefault();
+        }
+    });
+});
+
+//Displays AccessRequest 
+
+function DisplayAccessRequestModal() {
+    $("#AccessRequestModal-data-div").html("");
+    $('#accessRequestConfirmationText').hide();
+
+
+    var url = "/AccessRequest/ViewModal";
+
+    $.ajax({
+        url: url,
+        cache: false,
+        type: "GET",
+        datatype: "html",
+        contentType: "application/json; charset=utf-8",
+        data: {
+        },
+
+        success: function (result) {
+            $("#AccessRequestModal").modal('show');
+            $("#AccessRequestModal-data-div").html(result);
+            $("#AccessRequestModal-data-div").show();
+            $("#rolesSelection").multipleSelect();
+            SetUpAddPeopleToRequest();
+            SetUpPickers();
+            SetUpTextStyles();
+            $('.noTeamRow').hide();
+            $('#temporaryAccessCalendar').hide();
+            dataListSetUp();
+            peopleAdded = [];
+            peopleAdded.push($('#peopleRequested').val());
+        },
+        error: function (err) {
+            alert(err.responseText);
+        }
+    });
+
+};
+
+//SetUp
+
+function SetUpTextStyles() {
+
+    $('#rolesSelection').change(function () {
+        $("#rolesSelection-title").css({ "color": "white", "font-style": "normal" });
+    });
+
+    $('#teamComment').keyup(function () {
+        $("#teamComment-title").css({ "color": "white", "font-style": "normal" });
+    });
+
+    $('#formComment').keyup(function () {
+        $("#formComment-title").css({ "color": "white", "font-style": "normal" });
+    });
+
+    $('#tAccessDate').change(function () {
+        $("#expDate-title").css({ "color": "white", "font-style": "normal" });
+    });
+}
+
+function CheckboxesToggleTeam() {
+
+    if ($('#memberOrNot').is(':checked')) {
+        $('.noTeamRow').hide();
+        $("#formComment-title").css({ "color": "white", "font-style": "normal" });
+        $('#enterpriseIdsAdition').show();
+        $('#teamRow').show();
+        $('#formComment').val("");
+    } else {
+        $('#teamRow').hide();
+        $('#enterpriseIdsAdition').hide();
+        $("#teamComment-title").css({ "color": "white", "font-style": "normal" });
+        $("#peopleRequested-title").css({ "color": "white", "font-style": "normal" });
+        while (currentFields > 1) {
+            $('.idsRowAddedByButton').last().remove();
+            currentFields--;
+        }
+        $("#accessRequestSending").prop('disabled', false);
+        $("#accessRequestSending").css({ "cursor": "pointer" });
+        $('.noTeamRow').show();
+        $('#teamComment').val("");
+        $('#peopleRequested').val("");
+        $('.idsRowAddedByButton').first().val("");
+    }
+}
+
+function CheckboxesToggleTemp() {
+
+    if ($('#temporaryAccess').is(':checked')) {
+        $('#temporaryAccessCalendar').show();
+    } else {
+        $('#temporaryAccessCalendar').hide();
+        $("#expDate-title").css({ "color": "white", "font-style": "normal" });
+        $('#tAccessDate').val("");
+    }
+}
+
+function SetUpAddPeopleToRequest() {
+
+    var whereToAdd = $('#addPeopleHere');
+    var addButton = $('#AddPeopleToRequest');
+
+    $(addButton).click(function (e) {
+        e.preventDefault();
+        validationMessage = "";
+        $('#accessRequestValidationAlert').hide();
+
+        if (currentFields < 5 && $('#peopleRequested').val() != "") {
+
+            if (peopleAdded.indexOf($('#peopleRequested').val()) == -1) {
+
+                validationMessage += "The IDs is not valid. <br/>";
+                $('#peopleRequested-title').css({ "color": "#C52C2C", "font-style": "italic" });
+                $('#accessRequestValidationAlert').html("<strong>" + validationMessage + "</strong>");
+                $('#accessRequestValidationAlert').show();
+
+            } else if (peopleStackedOnList.indexOf($('#peopleRequested').val()) != -1) {
+
+                validationMessage += "The IDs is already on the list. <br/>";
+                $('#peopleRequested-title').css({ "color": "#C52C2C", "font-style": "italic" });
+                $('#accessRequestValidationAlert').html("<strong>" + validationMessage + "</strong>");
+                $('#accessRequestValidationAlert').show();
+
+            } else {
+
+                peopleStackedOnList.push($('#peopleRequested').val());
+                $(whereToAdd).append("<div align='right' class='idsRowAddedByButton'><span class='idListOfPeopleToAdd'>" + $('#peopleRequested').val() + "</span><span role='button' class='fa fa-close removeButtonsAccReq' style='color:#F14E4E; font-size:18px; margin-left:7px' title='Remove'></span></div>");
+                currentFields++;
+                $('#peopleRequested').val("");
+            }
+        }
+        $('#AccessRequestDataList').htmlPolyfill("");
+    });
+
+    $(whereToAdd).on("click", ".removeButtonsAccReq", function (e) {
+        e.preventDefault();
+        var toRemove = $(this).parent('div').closest('.idListOfPeopleToAdd').text();
+        $(this).parent('div').remove();
+        currentFields--;
+        peopleStackedOnList.splice(peopleStackedOnList.indexOf(toRemove), 1);
+        $('#AccessRequestDataList').htmlPolyfill("");
+    });
+}
+
+// Callendar Set-Up
+
+function SetUpPickers() {
+    Date.parseDate = function (input, format) {
+        return moment(input, format).toDate();
+    };
+    Date.prototype.dateFormat = function (format) {
+        return moment(this).format(format);
+    };
+
+    $('.datepicker-class').datetimepicker({
+        icons: {
+            date: 'glyphicon glyphicon-arrow-down'
+        },
+        format: "YYYY/MM/DD",
+        viewMode: "days",
+        ignoreReadonly: true
+    });
+}
+
+//Submits Form
+
+function SendAndCloseModal(e) {
+
+    e.preventDefault();
+    validationMessage = "";
+    $('#accessRequestValidationAlert').hide();
+
+    var rolesSelected = $('#rolesSelection').val();
+
+    if (rolesSelected == null) {
+        validationMessage += $('#rolesSelection').data("fieldname") + " are required. <br/>";
+        $('#rolesSelection-title').css({ "color": "#C52C2C", "font-style": "italic" });
+    }
+
+    if ($('#memberOrNot').is(':checked')) {
+
+        var team = $('#teamComment').val();
+        var inputPeopleRequested = $('input[name="peopleRequested"]').map(function () { return $(this).val(); }).get();
+
+        if (team == "") {
+            validationMessage += $('#teamComment').data("fieldname") + " is required. </br>";
+            $('#teamComment-title').css({ "color": "#C52C2C", "font-style": "italic" });
+        }
+
+        if (peopleStackedOnList.length < 1) {
+            validationMessage += "At least one ID is required. </br>";
+            $('#peopleRequested-title').css({ "color": "#C52C2C", "font-style": "italic" });
+        }
+
+    } else {
+
+        var justification = $('#formComment').val();
+
+        if (justification == "") {
+            validationMessage += $('#formComment').data("fieldname") + " is required. </br>";
+            $('#formComment-title').css({ "color": "#C52C2C", "font-style": "italic" });
+        }
+    }
+
+    if ($('#temporaryAccess').is(':checked')) {
+
+        var expDate = $('#tAccessDate').val();
+
+        if (expDate == "") {
+            validationMessage += $('#tAccessDate').data("fieldname") + " is required. <br/>";
+            $('#expDate-title').css({ "color": "#C52C2C", "font-style": "italic" });
+        } else if (!moment(expDate, 'YYYY/MM/DD', true).isValid()) {
+            validationMessage += $('#tAccessDate').data("fieldname") + " has wrong format. <br/>";
+            $('#expDate-title').css({ "color": "#C52C2C", "font-style": "italic" });
+        }
+    }
+
+    if (validationMessage == "") {
+
+        var newAccessRequestForm = $("#AccessRequestForm").serialize();
+        showWaitingModalBar("Sending");
+        $('#AccessRequestModal').modal('hide');
+        var idRequested = turnToString(peopleStackedOnList);
+        newAccessRequestForm += "&listOfPeopleRequested=" + idRequested;
+
+        $.ajax({
+            cache: false,
+            type: "POST",
+            url: '/AccessRequest/SendAccessRequest',
+            data: newAccessRequestForm,
+            success: function (result) {
+                $("#requestConfirmationMessage").text(result.message);
+                $('#AccessRequestModal-data-div').hide();
+                $('#accessRequestConfirmationText').show();
+                $("#AccessRequestModal").modal('show');
+            },
+            error: function (error) {
+                alert("Error trying to access the controler");
+            },
+            complete: function (jqXHR, status) {
+                hideWaitingModalBar();
+            }
+        });
+    } else {
+        $('#accessRequestValidationAlert').html("");
+        $('#accessRequestValidationAlert').html("<strong>" + validationMessage + "</strong>");
+        $('#accessRequestValidationAlert').show();
+    }
+}
+
+function turnToString(idsArray) {
+
+    var idsString = "";
+    for (var i = 0; i < idsArray.length; i++) {
+        if (i != 0) {
+            idsString += "," + idsArray[i];
+        } else {
+            idsString += idsArray[i];
+        }
+    }
+    return idsString;
+}
+
+// Close modal definitly
+
+function closeOnceAndForAll() {
+    $('#AccessRequestModal').modal('hide');
+    $('.modal-backdrop').each(function () {
+        $(this).hide();
+    });
+}
+
+// Check for duplicates in array
+
+function checkForDuplicates(arr) {
+    isUnique = true
+
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+            if (i != j) {
+                if (arr[i] == arr[j] && arr[i] != "") {
+                    isUnique = false
+                }
+            }
+        }
+    }
+    return isUnique;
+}
+
+// Check for empty values in array
+
+function checkForEmpty(arr) {
+    var thereAreNotEmpty = false;
+
+    for (var p = 0; p < arr.length; p++) {
+        if (arr[p] == "") { return !thereAreNotEmpty; }
+    }
+    return thereAreNotEmpty;
+}
+
+// Enterprise IDs Datalist
+
+function fAccessRequestDropdown(inputText, datalist) {
+
+    $("#peopleRequested-title").css({ "color": "white", "font-style": "normal" });
+    if (inputText != "") {
+        fAccessRequestDropdownAjax(inputText, datalist);
+    }
+}
+
+function fValidateAccessRequest(inputText, datalist) {
+
+    var optionPerson = $(datalist + ' option[value="' + inputText + '"]');
+
+    if (optionPerson.length != 0) {
+        peopleAdded.push(inputText);
+    }
+}
+
+function fAccessRequestDropdownAjax(inputText, datalist) {
+    $("#AddPeopleToRequest").prop('disabled', true);
+    $("#AddPeopleToRequest").css({ "cursor": "no-drop" });
+    $("#AddPeopleToRequest").attr({ "title": "ID is being validated..." });
+    $.ajaxSetup({ cache: false });
+    $.ajax({
+        type: 'GET',
+        url: '/AccessRequest/getUsersName',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: {
+            sUserToSearch: inputText
+        },
+        success: function (data) {
+            $(datalist).htmlPolyfill("");
+            for (var i = 0; i < data.length; i++) {
+                $(datalist).appendPolyfill("<option value='" +
+                data[i].EnterpriseId + "'></option>");
+            }
+            if (data.length == 1) {
+                fValidateAccessRequest(inputText, datalist);
+            }
+            $(datalist).updatePolyfill();
+            $("#AddPeopleToRequest").prop('disabled', false);
+            $("#AddPeopleToRequest").css({ "cursor": "pointer" });
+            $("#AddPeopleToRequest").removeAttr("title");
+        },
+        error: function (xhr) {
+            console.log('Javascript fUserDropdownAjax error' + xhr.message);
+        }
+    });
+}
+
+function dataListSetUp() {
+
+    $('#peopleRequested').on('input', function () {
+        if ($(this).val() == "") {
+            $('#AccessRequestDataList').htmlPolyfill("");
+        }
+        if ($(this).val() != "" && $(this).val() != lastInputMade) {
+            lastInputMade = $(this).val();
+            fAccessRequestDropdown($(this).val(), '#AccessRequestDataList');
+        }
+    });
+
+    $('#peopleRequested').on('paste', function () {
+        setTimeout(fAccessRequestDropdown, 100, new { inputText: this, datalist: '#AccessRequestDataList' });
+    });
+}

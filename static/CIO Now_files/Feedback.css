@@ -1,0 +1,151 @@
+﻿.center{
+    text-align: center;
+}
+
+.multiselect-container.dropdown-menu{
+    margin-top: 0% !important;
+    background-color: #252525 !important;
+    width: 120% !important;
+    font-size: 11px;
+    min-width: 0px;
+    border-radius: 0px;
+}
+
+.multiselect-container.dropdown-menu li a{
+    text-align: left !important;
+}
+.multiselect-container.dropdown-menu li a label.checkbox{
+white-space: nowrap;
+}
+
+.multiselect-container.dropdown-menu li a label.checkbox input{
+    left: 35px !important;
+    top: 3px !important;
+    width: 14px !important;
+
+
+}
+        
+.multiselect-container.dropdown-menu > li:nth-child(n+2){
+    border:none !important;
+}
+.multiselect.dropdown-toggle.btn.btn-default{
+    background-color: #252525;
+    background-image: none !important;
+    border: none;
+    border-radius: 0px;
+    text-shadow: none;
+    color: aliceblue !important;
+    padding: 1px;
+    margin-top: -2px;
+}
+
+button.multiselect.dropdown-toggle.btn.btn-default{
+    width: 120%;
+}
+
+
+
+
+div.ms-drop.bottom ul {
+    /*overflow: hidden;*/
+    background-color: #454545;
+    color: white;
+    margin-top: 1px;
+}
+
+div.ms-drop.bottom{
+    border:none;
+}
+
+.ms-drop.bottom ul li label input {
+    width: 13px;
+}
+button.ms-choice {
+    background-color: #454545;
+    border: 1px solid #DFE6E6;
+    border-radius: 0px;
+    color: #DFE6E6;
+    height: 20px;
+        padding: 10px;
+}
+button.ms-choice span {
+        text-align: left;
+    top: -3px;
+}
+
+.edit-tableRow{
+    background-color: transparent;
+    border: none;
+}
+.new-tableRow{
+    background-color: transparent;
+    border: none;
+}
+
+
+.labelFeedback{
+    color:#C55A11;
+    font-weight:bold;
+}
+#strAT,#strTFSID{
+    width: 100%;
+        
+}
+
+tr.webgrid-header th a {
+    color: #C55A11;
+    font-size: 14px;
+}
+
+#strEnterpriseID, #intFeedID {
+    padding: 0px;
+    max-width: none ;
+}
+
+#strAssignedTo{
+    padding:1px;
+}
+
+.webgrid-row-style.feedback,.webgrid-alternating-row.feedback{
+    font-size: 12px;
+}
+
+/*Styles for error message*/
+.containerAlert {
+    width:97%;
+    
+}
+
+.feedbackControl {
+    width:100%;
+    height:20px;
+}
+
+.feedbackViewerControl {
+    
+    height:22px;
+}
+
+/*div.alert.alert-warning {
+    background-color: black;
+    background-image: none;
+    color:#f5e79e;
+    text-shadow: none;
+}*/
+/*End of styles for error message*/
+.popover-title,.popover-content{
+    background-color:white !important;
+    color:black !important;
+  margin-left: 15px;
+}
+
+.popover-content a{
+    color: #337ab7;
+}
+.popover {
+        
+    max-width: 600px;
+    width:100%;
+}
+

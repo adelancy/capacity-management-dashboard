@@ -1,0 +1,117 @@
+﻿.x-axis path, .x-axis line {
+    fill: none;
+    stroke: #686767;
+    shape-rendering: crispEdges;
+}
+.y-axis paht, .y-axis line{
+  fill: white;
+  stroke: none;
+    shape-rendering: optimizeSpeed;
+}
+.x-axis text {
+    fill: white;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+#tooltip {
+    position: fixed;
+    text-align: center;
+    width: 40px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+#tooltip.hidden {
+    display: none;
+}
+#tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.CioStats_Cell {
+    padding-top:5px;
+    padding-bottom:5px;
+    background-color: #24201F;
+    height:280px;
+}
+.CioStats_Cell_medium {
+        padding-top:5px;
+    padding-bottom:5px;
+    background-color: #24201F;
+    /*height: 135px;*/
+}
+.CioStats_Cell-border-bottom {
+    border-bottom: 4px solid black;
+}
+.CioStats_Cell-border-right {
+    border-right: 4px solid black;
+}
+
+.SaasEnviromentsCircle{
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 10px;
+    height: 10px;
+    background: #C86712;
+}
+
+.AccentureManagedCircle{
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 10px;
+    height: 10px;
+    background: #20618F;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+    display: flex;
+  -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.chart-container{
+  width: 370px;
+  min-width:370px;
+}
+
+.metric-title{
+    font-size:140%; 
+    font-weight:bold;
+}
+@media only screen and (max-width: 1199px) {
+    .CioStats_Cell-border-right-last {
+        border-right: 4px solid black;
+    }
+}
+
+.pinnbutton{
+    cursor:pointer;
+}
+
+.pinnbutton:hover{
+    color: gray;
+}
+
+.edit-dots{
+    cursor:pointer;
+    color:white;
+}
+
+.edit-dots:hover{
+    cursor:pointer;
+    color:gray;
+}

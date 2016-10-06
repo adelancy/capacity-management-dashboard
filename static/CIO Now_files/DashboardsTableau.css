@@ -1,0 +1,61 @@
+﻿.tableauPlaceholder{
+    overflow: hidden;
+    display: block;
+    position: relative; 
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.tableau-Row{
+        margin-top: -28px;
+}
+
+.tableauPlaceholder-LCR{
+    width: 1120px; 
+    /*height: 1500px;*/ 
+    
+}
+
+.tableauplaceholder-PA{
+    width: 1120px; 
+    /*height: 900px;*/ 
+    /*margin-left: -6%;*/
+}
+
+.tableauPlaceholder-Demography{
+    width: 1120px; 
+    /*height: 1050px;*/
+ 
+}
+
+.tableauPlaceholder-MS{
+    width: 1120px; 
+    /*height: 1440px;*/ 
+    margin-bottom: 30px;
+    /*margin-left: -6%;*/
+}
+.tableauplaceholder-MP{
+    width: 1120px; 
+    /*height: 900px;*/ 
+    /*margin-left: -7%;*/
+}
+.tableauPlaceholder-PeopleSD{
+    width: 1120px; 
+    /*height: 1050px;*/ 
+ 
+}
+.tableauPlaceholder-Summary{
+    width: 1120px; 
+    /*height: 800px;*/ 
+
+}
+
+.tableauPlaceholder-CioStats{
+    width: 100%; 
+    /*height: 1000px;
+    margin-left: -11px;*/
+}
+
+
+

@@ -1,0 +1,38 @@
+$(document).ready(function () {
+
+
+
+   
+
+    getSelectValues = function (value) {
+
+        var arrayText = $(value).map(function () { return $(this).text(); }).get();
+        var arrayValues = $(value).map(function () { return $(this).val(); }).get();
+        var arrayOptions;
+        //arrayValues.reverse();
+        for (var i = 0; i < arrayValues.length; i++) {
+            arrayOptions += '<option value=' + arrayValues[i] + '>' + arrayText[i] + '</option>';
+        }
+
+        return arrayOptions;
+    }
+
+
+    var idRow = 0;
+
+
+    $("#addRow").click(function () {
+        
+        idRow += 1;
+        //Agregar </tr> al final de cada append ( si es el ultimo )
+        $('#portfolioTable').append('<tr id=' + idRow + '><td><button type="button"  class="btn btn-xs btn-default">X</button></td><td><select  name="portfolioOwnerSelect" class="portfolioOwnerSelect createInPutStyle">' + getSelectValues("#portfolioOwnerSelect>option") + '</select></td> <td><select name="portfolioNameSelect">' + getSelectValues("#portfolioNameSelect>option") + '</select></td> <td><input class="priorityName createInPutStyle" id="priorityName" name="priorityName" type="text" placeholder="Priority Name"/></td><td><select name="Scope">' + getSelectValues("#selectScope>option") + '</select></td><td><select name="Schedule">' + getSelectValues("#selectScope>option") + '</select></td><td><select name="Resources">' + getSelectValues("#selectScope>option") + '</select></td><td><select name="Quality">' + getSelectValues("#selectScope>option") + '</select></td><td><input class ="createInPutStyle" type="text" name="Comments"/></td>');
+
+
+    });
+
+   
+   
+
+
+});
+ 

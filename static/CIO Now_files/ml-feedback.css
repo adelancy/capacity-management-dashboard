@@ -1,0 +1,41 @@
+﻿#btn-submit{
+    
+    float: left;
+    margin-right: 3%;
+}
+
+
+.modal-color{
+    
+    background-color: black !important;
+ 
+}
+
+#portfolioTable > tbody > tr > td > textarea,
+#portfolioTable > tbody > tr > td > input
+{
+    min-height: 1em;
+    color: #ddd;
+    width: 100%;
+}
+
+.modal-content{
+    background-color: black;
+    border: 1px solid;
+
+}
+
+.table-condensed tbody tr td {
+
+    border-top: none !important;
+    /*border-bottom: 1px solid grey;*/
+
+}
+
+#fleFeedback{
+    background-color:black;
+    border:none;
+    margin-left: -6%;
+    color: whitesmoke;
+    width:112%;
+}

@@ -1,0 +1,291 @@
+﻿$(document).ready(function () {
+
+
+    Initialize();
+    setMenu();
+
+    changeHtmlTag();
+    if (window.addEventListener) {
+        window.addEventListener('load', changeHtmlTag, false);
+    }
+    else if (window.attachEvent) {
+        window.attachEvent('onload', changeHtmlTag);
+    }
+
+
+
+    $("ul#topnav li").hover(function () { //Hover over event on list item
+        $(this).css({ 'background': '#1376c9 url(topnav_active.gif) repeat-x' }); //Add background color and image on hovered list item
+        $(this).find("span").show(); //Show the subnav
+    }, function () { //on hover out...
+        $(this).css({ 'background': 'none' }); //Ditch the background
+        $(this).find("span").hide(); //Hide the subnav
+    });
+
+
+    //Function to set the width in % of the div that has the .container-fluid class
+    $('[data-toggle="modal"]').click(function () {
+
+
+        $("div.modal-backdrop.fade.in").css("z-index", "0");
+
+
+    });
+
+    /*Function to set the width of the submenu respect the menu*/
+
+    $(window).ready(function () {
+
+        var contentWidth = $(".nav.navbar-nav").width();
+        $(".dropdown-menu").width(contentWidth);
+
+    });
+
+
+
+    $(window).resize(function () {
+
+        var contentWidth = $(".nav.navbar-nav").width();
+        Initialize();
+        setMenu();
+        $(".dropdown-menu").width(contentWidth);
+
+    });
+
+
+
+    $("#altImg").hide();
+
+    function contains(a, obj) {
+        var i = a.length;
+        while (i--) {
+            if (a[i] === obj) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function chkFeedfields() {
+        if ($("#strLevel2").val() == "" || $("#strLevel2").val() == "Select" || $("#strLevel1").val() == "" || $("#strLevel1").val() == "Select" || $("#strLevel3").val() == "" || $("#strLevel3").val() == "Select" || $("#strDescription").val() == "" || $("#strBDesc").val() == "" || $("#strIssueForm").val() == "") {
+            return true;
+        }
+        return false;
+    }
+
+    $("#FeedbackForm").submit(function (e) {
+        $("#btnFeedbackSubmit").prop('disabled', true);
+
+        var filename = $("#fleFeedback").val();
+
+
+        var intFilesize;
+
+        try {
+            intFilesize = document.getElementById("fleFeedback").files[0].size;
+        }
+        catch (e) {
+            intFilesize = 0;
+        }
+
+
+
+        var extensions = filename.split("\.");
+
+        var finalExtension = extensions[extensions.length - 1];
+
+        var listaExtensiones = ["jpg", "png", "bmp"];
+        var flag = contains(listaExtensiones, finalExtension.toLowerCase());
+        var feedfields = chkFeedfields();
+
+        if ((flag && filename != "") || feedfields) {
+
+            if (feedfields) {
+                $("#strFeedWarning").text("Please fill all mandatory fields.");
+            }
+            else {
+                $("#strFeedWarning").text("You have to upload a valid image (.jpg, .gif or .png).");
+            }
+            $("#altImg").show();
+            $("#fleFeedback").val('');
+            $("#btnFeedbackSubmit").prop('disabled', false);
+            e.preventDefault();
+
+        }
+        else {
+            if (intFilesize < 2097152) {
+                $("#altImg").hide();
+            }
+            else {
+                $("#strFeedWarning").text("The image size limit is 2MB.");
+                $("#altImg").show();
+                $("#fleFeedback").val('');
+                $("#btnFeedbackSubmit").prop('disabled', false);
+                e.preventDefault();
+            }
+        }
+
+    });
+
+
+});
+
+//Go back function
+
+function goBack() {
+    window.history.back();
+}
+
+function htmlEncode(value) {
+    //create a in-memory div, set it's inner text(which jQuery automatically encodes)
+    //then grab the encoded contents back out.  The div never exists on the page.
+    return $('<div/>').text(value).html();
+}
+
+function htmlDecode(value) {
+    return $('<div/>').html(value).text();
+}
+
+
+function Initialize() {
+
+}
+
+setMenu = function () {
+    var burgerWidth = $(window).width();
+    var contentWidth = $('.menuppal').width();
+    var tabs = $('.navbar-nav').find('.items');
+    var submenuCount = 0;
+    var i = 0;
+
+    if (burgerWidth > 750) {
+        var elementWidth = contentWidth / tabs.length;
+
+        tabs.outerWidth((100 / tabs.length) + "%");
+        var menuHeight = $('.menuppal').outerHeight();
+
+        $('.dropdown-color').each(function () {
+            var menuPosition = $(this).data('position');//this captures the id of item of the ppal menu
+
+            $(this).css({ left: (elementWidth * menuPosition * -1) + "px" });
+
+            if ($(this).data("row") == 1) {
+
+                $(this).css({ top: menuHeight + "px" });
+            }
+            else {
+                var firstSubmenuHeight = $("#FirstSubmenu-" + menuPosition).outerHeight();
+                $(this).css({ top: (menuHeight + firstSubmenuHeight) + "px" });
+            }
+
+            submenuCount = $(this).prop('childElementCount');
+            $(this).find('li').outerWidth((100 / submenuCount) + "%");
+        });
+    } else {
+        var elementWidth = contentWidth / tabs.length;
+
+        tabs.outerWidth("100%");
+        $('.dropdown-color').each(function () {
+            $(this).find('li').outerWidth("100%");
+        });
+    }
+
+}
+
+function popup(mylink, submenuType, windowname, width, height) {
+    if (!window.focus) return true;
+    var href;
+    if (typeof (mylink) == 'string') {
+        href = mylink;
+    } else {
+        href = mylink.href;
+
+        if (submenuType == 'popup') {
+            window.open(href, windowname, 'width=' + width + ',height=' + height + ',scrollbars=yes, top=0, left=0, resizable=1');
+
+        } else {
+            var newtab = window.open(href, '_blank');
+            newtab.focus();
+
+        }
+
+    }
+    return false;
+}
+
+$('#tableauFrame-s1').load(function () {
+
+    changeHtmlTag();
+});
+
+
+
+
+function changeHtmlTag() {
+
+    $('canvas:not(.tabCanvas.tab-widget)').each(function () {
+
+        var image = new Image();
+        image.src = $(this).attr('src');
+        $(this).replaceWith(image);
+
+    });
+
+}
+/*Show & Hide waiting and saving modals*/
+
+/**
+ * Adds two numbers
+ * @param {Number} a 
+ * @param {Number} b
+ * @return {Number} sum
+ */
+function showWaitingModalBar(message) {
+    if (typeof message === 'undefined') {
+        message = 'Saving';
+    }
+
+    $('.global-loading-bar').modal({
+        backdrop: 'static',
+        show: false
+    });
+
+    var $modal = $('.global-loading-bar'),
+       $bar = $modal.find('.progress-bar');
+
+    $modal.modal('show');
+    $bar.addClass('animate');
+    if (message) {
+
+    }
+    $modal.find('h3').text(message);
+}
+
+function hideWaitingModalBar() {
+
+    $('.global-loading-bar').find('.progress-bar').removeClass('animate');
+    $('.global-loading-bar').modal('hide');
+
+}
+
+/******End Fix JQuery 1.12.3 Version**********/
+//Function missing for use PolyFill
+jQuery.swap = function (elem, options, callback, args) {
+    var ret, name, old = {};
+    // Remember the old values, and insert the new ones
+    for (name in options) {
+        old[name] = elem.style[name];
+        elem.style[name] = options[name];
+    }
+
+    ret = callback.apply(elem, args || []);
+
+    // Revert the old values
+    for (name in options) {
+        elem.style[name] = old[name];
+    }
+    return ret; 
+};
+
+
+/******Fix JQuery Version**********/

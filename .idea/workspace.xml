@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d68c134d-4a5e-4757-8073-cf2287628835" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/json_schemas/rack/devices.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/json_schemas/team.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/resources/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/resources/team/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/resources/team/team.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rest_api/unit_tests/tests_helper.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.db" afterPath="$PROJECT_DIR$/test.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/data_center/rack/devices/switch.py" afterPath="$PROJECT_DIR$/dbmodels/data_center/rack/devices/switch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/data_center/rack/devices/wireless.py" afterPath="$PROJECT_DIR$/dbmodels/data_center/rack/devices/wireless.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/team/physical_requirements.py" afterPath="$PROJECT_DIR$/dbmodels/team/physical_requirements.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/team/team.py" afterPath="$PROJECT_DIR$/dbmodels/team/team.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/team/virtual_requirements.py" afterPath="$PROJECT_DIR$/dbmodels/team/virtual_requirements.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest_api/endpoints.py" afterPath="$PROJECT_DIR$/rest_api/endpoints.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest_api/json_schemas/vm.py" afterPath="$PROJECT_DIR$/rest_api/json_schemas/vm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest_api/resources/__init__.py" afterPath="$PROJECT_DIR$/rest_api/resources/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest_api/util.py" afterPath="$PROJECT_DIR$/rest_api/util.py" />
     </list>
     <ignored path="dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +16,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dashboard_project$Rest_API_Tests.coverage" NAME="Rest API Tests Coverage Results" MODIFIED="1475727653906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dashboard_project$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1475727661190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dashboard_project$Rest_API_Tests.coverage" NAME="Rest API Tests Coverage Results" MODIFIED="1475729422798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/dashboard_project$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1475729408824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dashboard$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1475166240324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -44,14 +29,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="team.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="team.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rest_api/resources/team/team.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,7 +118,6 @@
         <option value="$PROJECT_DIR$/dbmodels/rack/outlets.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/pdu.py" />
         <option value="$PROJECT_DIR$/rest_api/json_schemas/rack/schemas.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/dbmodels/rack/rack.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/devices/bm.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/devices/firewall.py" />
@@ -155,6 +149,7 @@
         <option value="$PROJECT_DIR$/rest_api/resources/team/__init__.py" />
         <option value="$PROJECT_DIR$/rest_api/endpoints.py" />
         <option value="$PROJECT_DIR$/rest_api/resources/team/team.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -225,47 +220,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rest_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest_api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,6 +271,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="data_center" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprints" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprints" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compute" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1194,7 +1181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runserver">
+  <component name="RunManager" selected="Python tests.Rest API Tests">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1466,9 +1453,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Rest_API_Tests - 2016.10.05 at 21h 30m 25s.xml">
-      <configuration name="Rest API Tests" configurationId="tests" />
-    </history-entry>
     <history-entry file="Rest_API_Tests - 2016.10.05 at 21h 35m 45s.xml">
       <configuration name="Rest API Tests" configurationId="tests" />
     </history-entry>
@@ -1494,6 +1478,9 @@
       <configuration name="Rest API Tests" configurationId="tests" />
     </history-entry>
     <history-entry file="Rest_API_Tests - 2016.10.05 at 23h 20m 55s.xml">
+      <configuration name="Rest API Tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Rest_API_Tests - 2016.10.05 at 23h 50m 24s.xml">
       <configuration name="Rest API Tests" configurationId="tests" />
     </history-entry>
   </component>
@@ -1641,14 +1628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/devices/load_balancer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1736,7 +1715,7 @@
         <state relative-caret-position="304">
           <caret line="62" column="34" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
             <element signature="e#463#1190#0" expanded="false" />
             <element signature="e#1218#1261#0" expanded="false" />
             <element signature="e#1361#1546#0" expanded="false" />
@@ -1754,7 +1733,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#65#0" expanded="true" />
+            <element signature="e#0#65#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1820,7 +1799,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1854,7 +1833,7 @@
         <state relative-caret-position="108">
           <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1880,7 +1859,7 @@
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1898,7 +1877,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
           <folding>
-            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#0#48#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1924,7 +1903,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1934,7 +1913,7 @@
         <state relative-caret-position="629">
           <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1968,10 +1947,18 @@
     <entry file="file://$PROJECT_DIR$/rest_api/resources/team/team.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="89" column="12" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,434 @@
+﻿var timeNotificationChange;
+var timeNotificationList;
+var timeNotificationSession = 65 * 60;
+var resizetime;
+var resizetimeout = false;
+var resizedelta = 200;
+
+function loadRefreshBellIconEvent() {
+    var el_notification = document.getElementById('notification');
+    var inc_notif_btn = document.getElementById('inc-notif-btn');
+    var result_notification_counter = document.getElementById('count-notif-btn');
+
+    if (inc_notif_btn != undefined && el_notification != undefined && result_notification_counter != undefined) {
+
+        if (window.addEventListener) {
+            result_notification_counter.addEventListener('click', refreshPopoverNotificationcounter, false);
+            inc_notif_btn.addEventListener('click', refreshPopoverNotificationcounter, false);
+
+        }
+        else if (window.attachEvent) {
+            result_notification_counter.attachEvent('click', refreshPopoverNotificationcounter, false);
+            inc_notif_btn.attachEvent('click', refreshPopoverNotificationcounter, false);
+        }
+
+    }
+}
+
+function loadPopoverNotificationlist() {
+    var contentWidth = $('.menuppal').width();
+    var tabs = $('.navbar-nav').find('.items');
+    $.ajaxSetup({ cache: false });
+    $.ajax({
+        url: "/NotificationsService/ReloadNotificationsPopoverList",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        datatype: "html",
+        success: function (result) {
+            notificationPopoverResize(result);
+            console.log("Success:" + $("#sessionActualTime").text() + ".");
+        },
+        error: function (err) {
+            clearInterval(timeNotificationList);
+            console.log("Error: " + $("#sessionActualTime").text() + ".");
+        }
+
+    });
+
+};
+
+String.prototype.capitalizeWord = function () {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+String.prototype.capitalize = function () {
+    return this.replace(/(?:^|\s)\S/g, function (a) { return a.toUpperCase(); });
+}
+
+function loadCounter(count) {
+    var el = document.getElementById('notification');
+    el.setAttribute('data-count', count);
+    //var readFromPopover = $("#readFromPopover").val();s
+
+    if (count > 0) {
+        el.classList.remove('notify');
+        el.offsetWidth = el.offsetWidth;
+        el.classList.add('notify');
+        el.classList.add('show-count');
+    }
+    else {
+        //if (readFromPopover != undefined) $("#readFromPopover").val("");
+        el.offsetWidth = el.offsetWidth;
+        el.classList.remove('show-count');
+    }
+}
+
+function refreshPopoverNotificationcounter() {
+
+    $.ajaxSetup({ cache: false });
+    $.ajax({
+        url: "/NotificationsService/ReloadNotificationsCounter",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        datatype: "json",
+        success: function (result) {
+            if (result["notifCounter"] != undefined) {
+                loadCounter(result["notifCounter"]);
+            }
+            if (result["sessionTimeout"] != undefined) {
+                timeNotificationSession = 65 * 60;//result["sessionTimeout"] * 60;
+                $('#sessionActualTime').text(result["sessionTimeout"]);
+                refreshSessionTimer();
+            }
+
+            if (result["contextTimeout"] != undefined) {
+
+                $('#contextTimeout').text(result["contextTimeout"]);
+
+            }
+        },
+        error: function (err) {
+            clearInterval(timeNotificationList);
+            //alert("Refresh Counter: Fail opening the request - " + err + " -/-");
+        }
+
+    });
+
+}
+
+function refreshPopoverNotificationlist() {
+
+    $.ajaxSetup({ cache: false });
+    $.ajax({
+        url: "/NotificationsService/ReloadNotificationsPopoverList",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        datatype: "html",
+        success: function (result) {
+            notificationPopoverResize(result);
+            console.log("Success: " + $("#sessionActualTime").text() + ".");
+        },
+        error: function (err) {
+            clearInterval(timeNotificationList);
+            console.log("Error: " + $("#sessionActualTime").text() + ".");
+        }
+
+    });
+
+}
+
+function notificationPopoverResize(result) {
+    var notifWidth = $(window).width();
+    var place = 'bottom';
+
+    if (notifWidth < 769) {
+        place = 'top';
+    }
+    $('#notificationList').popover('destroy');
+    setTimeout(function () {
+        $('#notificationList').popover({
+            template: '<div class="popover notification-popover"><div class="notification-popover"></div><div class="popover-inner"><h4 class="popover-title"></h4><div class="popover-content"><p></p></div></div></div>',
+            placement: place,
+            html: true,
+            content: result
+        });
+    }, 200);
+
+    //$('#notificationList').attr('data-content', result);
+}
+
+function refreshSessionTimer() {
+    clearInterval(timeNotificationChange);
+    var display = $('#time');
+    startTimer(timeNotificationSession, display);
+}
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var firstWarning = 5 * 60;
+    var secondWarning = 0;
+    timeNotificationChange = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (timer == firstWarning) {
+            $('#messagesModal').modal({
+                backdrop: "static"
+            });
+            showWarningSessionModal("<strong>Warning!</strong> Your login session is about to expire. Please save your work and refresh the page.");
+            $('#messagesModal').modal({
+                backdrop: true
+            });
+        }
+
+        if (timer == secondWarning) {
+            timer = duration;
+            $('#messagesModal').modal({
+                backdrop: "static"
+            })
+            showWarningSessionModal('<strong>Warning!</strong> Your login session has expired. Please <a role="button" class="btn btn-warning btn-xs" onclick="reloadPage();">Click here</a> to refresh the page.');
+            $('#messagesModal').modal({
+                backdrop: true
+            });
+        }
+        else {
+            --timer;
+        }
+    }, 1000);
+}
+
+function reloadPage() {
+    location.reload();
+}
+
+function fElementUpdateFieldAjax(value) {
+    //showWaitingModal("Saving");
+    var id = $("#announcement-id").text();
+    var chkValue = $(value).is(":checked");
+    $.ajaxSetup({ cache: false });
+    $.ajax({
+        //async: false,
+        type: "POST",
+        url: '/NotificationsService/ElementUpdateField', // we are calling json method
+        dataType: "html",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify({
+            notificationID: id,
+            sValue: chkValue
+        }),
+        success: function (result) {
+            var x = result;
+            //hideWaitingModal();
+        },
+        error: function (jqxhr) {
+            //hideWaitingModal();
+            showWarningSessionModal('Sorry. Save Setting fails.');
+        }
+    });
+    return false;
+}
+
+$(document).ready(function () {
+
+    loadRefreshBellIconEvent();
+
+    $(document).on('click', '.list-item-notif', function () {
+        var val = $(this).val();
+        //if ($(this).hasClass("event-module")) { $.redirect('/ProgramStatus#calendar-section', { 'calendar-to-read': val, 'arg2': 'value2' }); }
+        //else
+        //{
+        //    if ($(this).hasClass("ecosystem-module")) { $.redirect('/EcosystemKeyDates', { 'calendar-to-read': val, 'arg2': 'value2' }); }
+        //    else 
+        $.redirect('/NotificationsService', { 'notif-to-read': val, 'arg2': 'value2' });
+        //}
+    });
+
+    document.querySelector('#restartSessionIcon').addEventListener('click', refreshSessionTimer());
+
+    $('body').on('click', function (e) {
+        //$('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        //if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+        if (!$('#notificationList').is(e.target) && $('#notificationList').has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            //$(this).popover('hide');
+            $('#notificationList').popover('hide');
+        }
+        //});
+
+    });
+
+    $(window).resize(function () {
+        resizetime = new Date();
+        if (resizetimeout === false) {
+            resizetimeout = true;
+            setTimeout(resizeend, resizedelta);
+        }
+    });
+
+    function resizeend() {
+        if (new Date() - resizetime < resizedelta) {
+            setTimeout(resizeend, resizedelta);
+        } else {
+            resizetimeout = false;
+            loadPopoverNotificationlist();
+        }
+    }
+
+    $('#notificationList').on('click', function (e) {
+        $(this).popover("toggle");
+    });
+
+    refreshPopoverNotificationcounter();
+    loadPopoverNotificationlist();
+    timeNotificationList = window.setInterval(function () { refreshPopoverNotificationcounter(); refreshPopoverNotificationlist(); }, 120000);
+
+    showAnnouncementsModal();
+
+});
+
+function showWarningSessionModal(message) {
+
+    $(".messagesModal-header #messageTitle").html("Message");
+    $(".messagesModal-body").html(
+        '<div id="warningMessage" class="alert alert-warning" role="alert"></div>'
+        );
+
+    $(".messagesModal-body #warningMessage").html(message);
+
+
+    $("#messagesModal").modal("show");
+}
+
+function readAnnouncement(id) {
+    $("#announcements-read-section").show();
+    $("#announcements-list-section").hide();
+    $("#chbx-dismiss-section").hide();
+    $.ajax({
+        url: '/NotificationsService/ReadOneNotification',
+        type: "POST",
+        dataType: 'json',
+        data: {
+            notificationID: id
+        },
+        success: function (cnnotification) {
+            //$(".list-item-announcement").each(function () { $(this).removeClass("active-announcement"); });
+            //setTimeout(function () {
+            if ($("#list-item-announcement-" + id).hasClass("item-announcement-1-0") == true) { $("#list-item-announcement-" + id).removeClass("item-announcement-1-0"); $("#list-item-announcement-" + id).addClass("item-announcement-1-1"); }
+            if ($("#list-item-announcement-" + id).hasClass("item-announcement-0-0") == true) { $("#list-item-announcement-" + id).removeClass("item-announcement-0-0"); $("#list-item-announcement-" + id).addClass("item-announcement-0-1"); }
+            var startDate = moment(cnnotification[3]).utc().format('MM/DD/YYYY');
+            //$("#title-short-descrip-read-announcement").html(htmlDecode(cnnotification[2]).capitalize() + "<span class=\"date-at-right\" style=\"font-size: small;\">" + moment(cnnotification[3]).format('MM/DD/YYYY') + "</span>");
+            //$("#title-short-descrip-read-announcement").html(htmlDecode(cnnotification[2]).capitalize() + " as of " + moment(cnnotification[3]).format('MM/DD/YYYY'));
+            $("#title-short-descrip-read-announcement").text(htmlDecode(cnnotification[2]).capitalize());
+            $("#subtitle-short-descrip-read-announcement").text(htmlDecode(cnnotification[17]).capitalize());
+            $("#date-of-read-announcement").text(moment(cnnotification[3]).utc().format('MM/DD/YYYY'));
+            $('#title-short-descrip-read-announcement').prop('title', htmlDecode(cnnotification[2]).capitalize());
+            $("#textCode-read-announcement").html(htmlDecode(cnnotification[1]));
+            $("#readFromPopover").val(id);
+            $("#announcement-id").text(cnnotification[0]);
+
+            //$("#chbx-dismiss-announcement").prop("checked", cnnotification[6]);
+            $("#read-important-announcement").html(cnnotification[16] ? "<i class=\"fa fa-exclamation\" style=\"color: #f14e4e; font-size: large;\"></i>" : "&nbsp;&nbsp;");
+            //var ele = $("#announcement-elem-" + id);
+            //$("#announcement-elem-" + id).addClass("active-announcement");
+            //$('#chbx-dismiss-announcement').change(function () {
+            //    fElementUpdateFieldAjax($(this));
+            //});
+            var htmltext = (cnnotification[9] != null) ? '<div style="font-style:italic;font-size:11px;color:#AAAAAA; cursor: default" class="userInformation">' +
+                '<div align="right">' +
+                    '<div>Created at <span>' + moment(cnnotification[11]).format('MM/DD/YYYY HH:mm:ss A') + '</span>' +
+                    ' by   &thinsp;<span class="author" data-user-id="' + cnnotification[13] + '">' + cnnotification[9] + '</span></div>' +
+                    '<div>Last modified at <span>' + moment(cnnotification[12]).format('MM/DD/YYYY HH:mm:ss A') + '</span>' +
+                    ' by   &thinsp;<span class="author" data-user-id="' + cnnotification[14] + '">' + cnnotification[10] + '</span></div>' +
+                '</div></div>' : "";
+            $("#user-read-info-announcement").html(htmltext);
+            refreshPopoverNotificationcounter(); refreshPopoverNotificationlist();
+            //}, 500);
+            //setTimeout(function () {
+            //    loadLyncsStatus();
+            //}, 1000);
+        },
+        error: function (strError) {
+            $("#alrImalert").text(strError);
+            $("#alrImalert").show();
+        }
+
+    });
+}
+
+function backToListAnnouncement() {
+    $("#announcements-read-section").hide();
+    $("#announcements-list-section").show();
+    $("#chbx-dismiss-section").show();
+    $("#title-short-descrip-read-announcement").text("");
+    $("#subtitle-short-descrip-read-announcement").text("");
+    $("#date-of-read-announcement").text("");
+    $("#textCode-read-announcement").html("");
+    //$("#readFromPopover").val(id);
+    $("#announcement-id").text("");
+    $("#read-important-announcement").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+    $("#user-read-info-announcement").html("");
+}
+
+function showAnnouncementsAgain() {
+    if ($("#chbx-dismiss-announcement").prop("checked") == true) {
+        $.ajaxSetup({ cache: false });
+        $.ajax({
+            url: "/NotificationsService/NotShowAnnouncementsAgain",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            datatype: "text",
+            success: function (result) {
+                //refreshPopoverNotificationcounter();
+                //loadPopoverNotificationlist();
+            },
+            error: function (err) {
+                var x = err.message;
+                showWarningSessionModal(err.message);
+            }
+
+        });
+    }
+};
+
+function showAnnouncementsModal() {
+    var reff = document.referrer.toLowerCase();
+    if (reff.indexOf("https://cionow") == -1 && reff.indexOf("localhost") == -1) {
+        $.ajax({
+            url: '/NotificationsService/ReloadAnnouncementList',
+            type: "POST",
+            dataType: 'HTML',
+            success: function (cnannouncements) {
+                $("#div-announcements").html(cnannouncements);
+
+                if ($("#showAnnouncements").text() == "yes") {// readAnnouncement($(".list-item-announcement").first().data("announcementid"));
+                    setTimeout(function () {
+                        $("#chbx-dismiss-announcement").prop("checked", false);
+                        $('#announcementsModal').modal({
+                            backdrop: "static"
+                        })
+                        $("#announcementsModal").modal("show");
+                        $('#announcementsModal').modal({
+                            backdrop: true
+                        });
+                    }, 250);
+                }
+            },
+            error: function (strError) {
+                $("#div-announcements").html(strError.responseText);
+                var x = $("#showAnnouncements").text();
+                if (x == "yes") $("#announcementsModal").modal("show");
+            }
+
+        });
+    }
+
+}
+
+function filterAnnouncementsListView(e) {
+    var selected = e.value;
+    $(".list-item-announcement").each(function () {
+        if (Number(selected) == 2) {
+            ($(this).hasClass("item-announcement-1-0") == true || $(this).hasClass("item-announcement-1-1") == true) ? $(this).show() : $(this).hide();
+        }
+        if (Number(selected) == 1) {
+            ($(this).hasClass("item-announcement-1-0") == true || $(this).hasClass("item-announcement-0-0") == true) ? $(this).show() : $(this).hide();
+        }
+        if (Number(selected) == 0) $(this).show();
+    });
+}

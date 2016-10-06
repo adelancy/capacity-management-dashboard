@@ -1,0 +1,459 @@
+﻿/// <reference path="jquery-1.10.2-vsdoc.js" />
+
+$(document).ready(function () {
+
+    $(document).ajaxComplete(function () {
+        $('.percentage').tooltip({ title: ".Var from previuos quarter" });
+    });
+});
+
+$(".pinnbutton").mouseover(function () {
+    $(this).toggleClass("fa-rotate-90");
+})
+
+$(".pinnbutton").mouseout(function () {
+    $(this).toggleClass("fa-rotate-90");
+})
+
+function setAsDefault(ddlDashboard) {
+    id = ddlDashboard.options[ddlDashboard.selectedIndex].value;
+    if (id != "") {
+        $.get("Home2/SetDefault", { id: id }, function (data) {
+            if (data == "Success") {
+                //delete the actual Default
+                for (var i = 0; i < ddlDashboard.options.length; i++) {
+                    var string = ddlDashboard.options[i].label;
+                    var substring = " [Default]";
+                    if (string.indexOf(substring) > -1) {
+                        ddlDashboard.options[i].label = ddlDashboard.options[i].label.replace(" [Default]", "");
+                        break;
+                    }
+                }
+                //add "[Default]" to the selected Dashboard
+                txt = ddlDashboard.options[ddlDashboard.selectedIndex].text + " [Default]";
+                var option = ddlDashboard.options[ddlDashboard.selectedIndex];
+                option.label = txt;
+                $("#alertsModal-data-div").empty();
+                $("#alertsModal-data-div").html("\"" + ddlDashboard.options[ddlDashboard.selectedIndex].label.replace(" [Default]", "") + "\" has been selected as Default");
+                $("#alertsModal").modal('show');
+            }
+            else
+                console.log("Error in PS");
+        })
+    }
+}
+
+//Select the default and add "[Default]" in the ddl
+function populateDefaultInDDL(flag) {
+    var ddlDashboard = document.getElementById("ddlDashboard");
+    $.get("Home2/getDefaultDashboard", function (id) {
+        for (var i = 0; i < ddlDashboard.options.length; i++) {
+            var idDDL = ddlDashboard.options[i].value;
+            if (idDDL == id) {
+                ddlDashboard.options[i].label = ddlDashboard.options[i].label + " [Default]";
+                if (flag != true)
+                {
+                    ddlDashboard.options[i].selected = true;
+
+                }
+                
+                break;
+            }
+        }
+    });
+}
+
+//change the ddlDashboards in the main View. and place the word "default" in the default dashboard
+function changeddlDashboard(ddlType) {
+    var value = ddlType.options[ddlType.selectedIndex].value;
+    $.ajax({
+        cache: false,
+        type: "GET",
+        url: '/Home2/getDashboardsList',
+        dataType: "json",
+        data: {
+            value: value
+        },
+        success: function (data) {
+            serialization = data;
+            var strInsert = "<option value =''></option>"
+            $("#ddlDashboard").prop("disabled", false);
+            $("#ddlDashboard").css("font-style", "normal");
+            switch (value) {
+                case "All":
+                    $("#ddlDashboard").empty();
+                    
+                    strInsert += "<optgroup label='Leadership'>"
+                    $.each(data, function (key, value) {
+                        if (value.Type == "portfolio") {
+                            strInsert += "<option value='" + value.Dashboard_ID + "'>" + value.MDName + " - "+ value.DashboardName  + "</option>";
+                        }
+                    });
+                    strInsert += "</optgroup><optgroup label='Personal'>";
+                    $.each(data, function (key, value) {
+                        if (value.Type != "portfolio") {
+                            strInsert += "<option value='" + value.Dashboard_ID + "'>" + value.DashboardName + "</option>";
+                        }
+                    });
+                    strInsert += "</optgroup>";
+                    $("#ddlDashboard").append(strInsert);
+                    populateDefaultInDDL(true);
+                    break;
+                case "Leadership":
+                    $("#ddlDashboard").empty();
+                    strInsert += "<optgroup label='Leadership'>";
+                    $.each(data, function (key,value) {
+                        if (value.Type == "portfolio") {
+                            strInsert += "<option value='" + value.Dashboard_ID + "'>" + value.MDName + " - " + value.DashboardName  + "</option>";
+                        }
+                    });
+                    strInsert+="</optgroup>";
+                    $("#ddlDashboard").append(strInsert);
+                    populateDefaultInDDL(true);
+                    break;
+                case "Personal":
+                    $("#ddlDashboard").empty();
+                    var count = 0;
+                    $.each(data, function (key, value) {
+                        if(value.Type!="portfolio"){
+                            count = 1;
+                        }
+                    });
+                    if (count == 0)
+                    {
+                        $("#ddlDashboard").css("font-style", "oblique");
+                        $("#ddlDashboard").prop("disabled", true);
+                        $("#ddlDashboard").append("<option value='' style='color: black'>NO PERSONAL DASHBOARDS</option>")
+                        break;
+                    }
+                    
+                    strInsert += "<optgroup label='Personal'>";
+                    $.each(data, function (key, value) {
+                        if (value.Type != "portfolio") {
+                            strInsert+="<option value='" + value.Dashboard_ID + "'>" + value.DashboardName + "</option>";
+                        }
+                    });
+                    strInsert+="</optgroup>";
+                    $("#ddlDashboard").append(strInsert);
+                    populateDefaultInDDL(true);
+                    break;
+                default:
+                    break;
+
+            }
+        },
+        error: function (xhr) {
+            console.log(xhr.responseText)
+        }
+    });
+}
+
+//Load the specific dashboard seleceted in the ddl
+function loadDashboardView(id, ddl) {
+    if (id == 0) {
+        id = ddl.options[ddl.selectedIndex].value;
+        if (id == "") {
+            return 0;
+        }
+    }
+    var serialization;
+    $.getJSON("HomepageManager/GetSerialization", { id: id }, function (data) {
+        serialization = data;
+        gridster = $(".gridster ul").gridster({
+            widget_margins: [2, 2],
+            widget_base_dimensions: [367, 276],
+            max_cols: 3
+        }).data('gridster');
+        gridster.remove_all_widgets();
+        gridster.disable();
+        serialization = Gridster.sort_by_row_and_col_asc(serialization);
+        $.each(serialization, function () {
+            var col = this.col;
+            var row = this.row;
+            var size_x = this.size_x;
+            var size_y = this.size_y;
+            $.get("HomepageManager/GetHTML", { visual: this.visual }, function (data, index) {
+                gridster.add_widget('<li class="gridster ready" >' + data + '</li>', size_x, size_y, col, row);
+            })
+        });
+    });
+}
+
+function changeGlyp(idContainer) {
+    $(idContainer).toggleClass("glyphicon-chevron-right");
+
+    $(idContainer).toggleClass("glyphicon-chevron-down");
+}
+
+function PopulateSubtitles(adoptionID, optimizationID, FYID) {
+    $.getJSON('/Home2/subtitlesData', function (data) {
+        $(adoptionID).text(data.adoption);
+        $(optimizationID).text(data.optimization);
+        $(FYID).text(data.FY);
+    });
+}
+function BulletChart(idContainer) {
+    $.ajax({
+        cache: false,
+        type: "GET",
+        url: '/Home2/dataBulletChart',
+        success: function (result) {
+            drawBulletChart(result, idContainer)
+
+        },
+        error: function (err) {
+            console.log("Error opening the request")
+        }
+    });
+}
+
+function OptimizationChart(idContainer) {
+    $.ajax({
+        cache: false,
+        type: "GET",
+        url: '/Home2/OptimizationData',
+        success: function (result) {
+            drawOptimizationChart(result, idContainer)
+
+        },
+        error: function (err) {
+            console.log("Error opening the request")
+        }
+    });
+}
+
+function drawOptimizationChart(dataset, idContainer) {
+    var initialData = dataset;
+    var margins = {
+        top: 0,
+        left: 0,
+        right: 35,
+        bottom: 0
+    },
+width = 340 - margins.left - margins.right,
+    height = 60 - margins.top - margins.bottom,
+
+    series = dataset.map(function (d) {
+        return d.name;
+    }),
+    numbers = dataset.map(function (d) {
+        return d.data.map(function (o) {
+            return o.count
+        });
+    })
+    dataset = dataset.map(function (d) {
+
+        return d.data.map(function (o, i) {
+            return {
+                name: d.name,
+                year: d.year,
+                y: o.count,
+            };
+        });
+    }),
+    stack = d3.layout.stack();
+
+    stack(dataset);
+
+    var tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "nvtooltip xy-tooltip nv-pointer-events-none")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .text("a simple tooltip");
+    var nameaux = ""
+    var year = ""
+
+
+    var dataset = dataset.map(function (group) {
+        return group.map(function (d) {
+            // Invert the x and y values, and y0 becomes x0
+
+            return {
+                year: d.year,
+                name: d.name,
+                x: d.y,
+                y: d.x,
+                x0: d.y0
+            };
+        });
+    }),
+
+
+        svg = d3.select(idContainer)
+            .append('svg')
+            .attr('width', width + margins.left + margins.right)
+            .attr('height', height + margins.top + margins.bottom)
+            .append('g')
+            .attr('transform', 'translate(' + margins.left + ',' + margins.top + ')'),
+
+        xMax = d3.max(dataset, function (group) {
+            return d3.max(group, function (d) {
+                return d.x;
+            });
+        }),
+        xScale = d3.scale.linear()
+            .domain([0, xMax])
+            .range([0, width]),
+        months = dataset[0].map(function (d) {
+            return d.y;
+        }),
+
+        yScale = d3.scale.ordinal()
+            .domain(months)
+            .rangeRoundBands([0, height], .2),
+
+        xAxis = d3.svg.axis()
+            .scale(xScale)
+            .orient('bottom'),
+        yAxis = d3.svg.axis()
+            .scale(yScale)
+            .orient('left'),
+
+        colours = ["#808080", "#FF7F0E"],
+
+        groups = svg.selectAll('g')
+            .data(dataset)
+            .enter()
+            .append('g')
+            .style('fill', function (d, i) {
+                return colours[i];
+            })
+            .style('fill-opacity', '1'),
+
+        rects = groups.selectAll('rect')
+
+            .data(function (d) {
+                return d;
+            })
+
+            .enter()
+            .append('rect')
+            .attr("class", "cloudification-bar")
+            .attr('id', function (d, i) {
+                return "rectn" + d.x;
+            })
+            .attr('x', function (d) {
+                return 0;
+            })
+            .attr('y', function (d, i) {
+                return yScale(d.y);
+            })
+            .attr('height', function (d) {
+                return yScale.rangeBand();
+            })
+            .attr('width', function (d) {
+                var a = xScale(d.x);
+                return xScale(d.x);
+            })
+        .on("mouseover", function (d, i) {
+            $("#rectn" + d.x).css("fill-opacity", '.75');
+
+            tooltip.text(d.name + ": " + d3.format("$,.0f")(d.x));
+            return tooltip.style("visibility", "visible");
+        })
+    .on("mousemove", function () {
+        return tooltip.style("top", (event.pageY - 30) + "px").style("left", (event.pageX - 150) + "px");
+    })
+    .on("mouseout", function (d, i) {
+        $("#rectn" + d.x).css("fill-opacity", '1');
+        return tooltip.style("visibility", "hidden");
+    });
+    numbers.forEach(function (s, i) {
+        svg.append('text')
+                .attr("class", "inside-bar")
+                .attr('x', (i - 1) * -230 + 4
+                )
+                .attr('y', (height / 2 + margins.top / 2 + 4))
+                .text(function () {
+                    var number = s / 1000000
+                    return d3.format("$.3r")(number) + "M"
+                });
+    });
+}
+
+
+function drawBulletChart(data, idContainer) {
+    var margin = { top: 0, right: 35, bottom: 0, left: 0 },
+    width = 340 - margin.left - margin.right,
+    height = 39 - margin.top - margin.bottom;
+
+
+    var chart = d3.bullet()
+        .width(width)
+        .height(height);
+    //data = [
+    //  { "title": "Cloudification", "subtitle": "% to FY18", "ranges": [33, 66, 100], "measures": [50], "markers": [90] }
+    //];
+
+    var svg = d3.select(idContainer).selectAll("svg")
+          .data(data)
+        .enter().append("svg")
+          .attr("class", "bullet")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .call(chart);
+
+    var prelegend = svg.append("g")
+        .append("text")
+          .attr("class", "prelegend")
+        .attr("transform", "translate(" + 280 + "," + (height / 2 - 5) + ")")
+        .style("fill", "white")
+        .text(function (d) { return d.sublegend });
+
+
+    var legend = svg.append("g")
+        .append("text")
+          .attr("class", "legend")
+
+        .attr("transform", "translate(" + 280 + "," + (height / 2 + 13) + ")")
+        .style("fill", "white")
+        .text(function (d) { return d.markers[0] + "%" })
+
+
+    var number = svg.append("g")
+.append("text")
+.attr("transform", "translate(" + 3 + "," + (height / 2 + 6) + ")")
+    .attr("class", "inside-bar")
+
+.text(function (d) {
+    return d.measures[0] + "%";
+})
+    var title = svg.append("g")
+        .style("text-anchor", "end")
+        .attr("transform", "translate(-6," + height / 2 + ")");
+
+    title.append("text")
+        .attr("class", "title")
+        .text(function (d) { return d.title; });
+
+    title.append("text")
+        .attr("class", "subtitle")
+        .attr("dy", "1em")
+        .text(function (d) { return d.subtitle; });
+
+}
+
+
+
+function lineDeleteAndCloseModal(id) {
+    $.ajax({
+        cache: false,
+        type: "POST",
+        url: '/App_Fix/DeleteLine',
+        data: {
+            id: id
+        },
+        success: function (result) {
+            refreshList();
+            refreshListFinished();
+
+        },
+        error: function (err) {
+            console.log("Error opening the request")
+        }
+    });
+};
