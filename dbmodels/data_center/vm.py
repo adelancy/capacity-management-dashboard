@@ -1,5 +1,4 @@
 from extensions.sql_alchemy import sqldb
-from location import Location  # Needed for relationship
 
 
 class VM(sqldb.Model):

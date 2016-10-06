@@ -1,5 +1,5 @@
+from dbmodels.data_center.license import License
 from locations import LocationsCollection, Location
-from dbmodels.license import License
 from rest_api.json_schemas.vm import VMSchema
 
 

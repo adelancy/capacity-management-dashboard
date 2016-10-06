@@ -3,8 +3,9 @@ from datetime import datetime
 
 from flask import request
 from flask_restful import Resource, reqparse
+
+from dbmodels.data_center.location import Location
 from extensions.sql_alchemy import sqldb
-from dbmodels.location import Location
 from ..json_schemas.location import LocationSchema
 from ..util import output_json, handle_rest_error_response
 

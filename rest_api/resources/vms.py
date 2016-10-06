@@ -1,5 +1,5 @@
+from dbmodels.data_center.vm import VM
 from locations import LocationsCollection, Location
-from dbmodels.vm import VM
 from rest_api.json_schemas.vm import VMSchema
 
 

@@ -1,4 +1,8 @@
-import resources
+import resources.locations
+import resources.vms
+import resources.licenses
+import resources.outlets
+import resources.racks
 
 PREFIX = 'data'
 

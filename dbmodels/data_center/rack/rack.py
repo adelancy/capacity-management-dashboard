@@ -9,6 +9,7 @@ class Rack(sqldb.Model):
     id = sqldb.Column(sqldb.Integer, primary_key=True)
     vendor = sqldb.Column(sqldb.String)
     model = sqldb.Column(sqldb.String)
+    size = sqldb.Column(sqldb.Integer)
     serial_number = sqldb.Column(sqldb.String)
     deleted = sqldb.Column(sqldb.Boolean)
     last_modified_dt = sqldb.Column(sqldb.DateTime)
