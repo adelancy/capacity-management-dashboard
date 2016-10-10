@@ -1,7 +1,7 @@
 from dbmodels.data_center.rack.rack import Rack, RackUnit
 
 from dbmodels.data_center.rack.pdu import PDU
-from locations import LocationsCollection, Location
+from rest_api.resources.data_center.locations import LocationsCollection, Location
 from rest_api.json_schemas.rack.schemas import RackSchema, RackUnitSchema
 
 

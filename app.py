@@ -1,11 +1,12 @@
 from flask import Flask
 from extensions import init_extensions
-from blueprints.compute import compute
+from blueprints.compute import compute, default
 
 
 def create_app(config_filename=None):
     app = Flask(__name__)
     app.register_blueprint(compute)
+    app.register_blueprint(default)
     init_extensions(app)
 
     if config_filename is not None:

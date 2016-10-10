@@ -1,6 +1,6 @@
 from dbmodels.data_center.rack.outlets import Outlets, OutletType
-from racks import RacksCollection, Rack
 from rest_api.json_schemas.rack.schemas import OutletTypeSchema, OutletSchema
+from rest_api.resources.data_center.rack.racks import RacksCollection, Rack
 
 
 class OutletCollection(RacksCollection):
