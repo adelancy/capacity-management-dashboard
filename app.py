@@ -1,6 +1,6 @@
 from flask import Flask
 from extensions import init_extensions
-from blueprints.compute import compute, default
+from blueprints.compute import compute, default, dashboard
 
 
 def create_app(config_filename=None):

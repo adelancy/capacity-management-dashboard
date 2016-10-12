@@ -2,23 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d68c134d-4a5e-4757-8073-cf2287628835" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blueprints/compute/forms/requirements.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/rack/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/rack/devices/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rest_api/resources/licenses.py" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/licenses.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rest_api/resources/locations.py" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/locations.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rest_api/resources/outlets.py" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/outlets.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rest_api/resources/racks.py" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/rack/racks.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rest_api/resources/vms.py" afterPath="$PROJECT_DIR$/rest_api/resources/data_center/vms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.db" afterPath="$PROJECT_DIR$/test.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dashboard_project.iml" afterPath="$PROJECT_DIR$/.idea/dashboard_project.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/AccessRequest.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/AccessRequest.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Audio.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Audio.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Bad.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Bad.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Chart.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Chart.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Chart.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/Chart.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/DashboardsTableau.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/DashboardsTableau.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Feedback.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Feedback.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Home2.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Home2.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Home2.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/Home2.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Index.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/Index.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/KX contributions.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/KX contributions.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Lync Mobile.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Lync Mobile.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/MX videos upload.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/MX videos upload.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Mobile devices.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Mobile devices.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Normalize.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Normalize.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/NotificationService.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/NotificationService.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/NotificationService.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/images/NotificationService.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/SharePoint sites.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/SharePoint sites.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Stream_Circle downloads.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Stream_Circle downloads.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Video.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Video.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Workstations deployed.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Workstations deployed.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/asc.gif" afterPath="$PROJECT_DIR$/static/cio-now-template/images/asc.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-datetimepicker.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/bootstrap-datetimepicker.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-datetimepicker.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/bootstrap-datetimepicker.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-theme.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/bootstrap-theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/bootstrap-theme.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/bootstrap.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bullet.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/bullet.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/stylesheet.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/d3.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/d3.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/datetimepicker-portfolio.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/datetimepicker-portfolio.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/desc.gif" afterPath="$PROJECT_DIR$/static/cio-now-template/images/desc.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/font-awesome.min.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jQuery.lyncpresence.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jQuery.lyncpresence.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery-1.12.3.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery-1.12.3.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.gridster.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/jquery.gridster.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.gridster.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery.gridster.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.redirect.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery.redirect.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.smartmenus.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery.smartmenus.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquerysession.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquerysession.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/layout(1).css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/layout(1).css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/layout.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/layout.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/layout.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/layout.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/ml-feedback.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/ml-feedback.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/moment.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/moment.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/moment.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/moment.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/nv.d3.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/nv.d3.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/polyfiller.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/polyfiller.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/shim.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/shim.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/sm-blue.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/sm-blue.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/sm-core-css.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/sm-core-css.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/tooltipsy.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/tooltipsy.min.js.download" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/CIO Now.html" afterPath="$PROJECT_DIR$/templates/cio-now-template.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blueprints/compute/__init__.py" afterPath="$PROJECT_DIR$/blueprints/compute/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blueprints/compute/controllers.py" afterPath="$PROJECT_DIR$/blueprints/compute/controllers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest_api/endpoints.py" afterPath="$PROJECT_DIR$/rest_api/endpoints.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rest_api/resources/__init__.py" afterPath="$PROJECT_DIR$/rest_api/resources/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
     </list>
     <ignored path="dashboard.iws" />
@@ -33,7 +73,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/dashboard_project$Rest_API_Tests.coverage" NAME="Rest API Tests Coverage Results" MODIFIED="1476108874165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dashboard_project$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1476109772524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dashboard_project$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1476230377130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dashboard$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1475166240324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -48,34 +88,10 @@
       <file leaf-file-name="controllers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blueprints/compute/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="289">
+              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blueprints/compute/forms/requirements.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,9 +100,34 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blueprints/compute/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cio-now-template.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/cio-now-template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+              <folding>
+                <element signature="e#4276#4305#0#HTML" expanded="false" />
+                <element signature="n#img#0;n#p#0;n#div#0;n#li#7;n#ul#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,8 +135,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -117,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dbmodels/vm.py" />
-        <option value="$PROJECT_DIR$/rest_api/json_schemas/license.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/devices/wireless.py" />
         <option value="$PROJECT_DIR$/blueprints/compute/templates/gather_requirements.html" />
         <option value="$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html" />
@@ -163,11 +202,13 @@
         <option value="$PROJECT_DIR$/rest_api/endpoints.py" />
         <option value="$PROJECT_DIR$/rest_api/resources/data_center/__init__.py" />
         <option value="$PROJECT_DIR$/rest_api/resources/data_center/rack/__init__.py" />
+        <option value="$PROJECT_DIR$/blueprints/compute/forms/requirements.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/blueprints/compute/__init__.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/CIO Now.html" />
         <option value="$PROJECT_DIR$/blueprints/compute/controllers.py" />
-        <option value="$PROJECT_DIR$/blueprints/compute/forms/requirements.py" />
+        <option value="$PROJECT_DIR$/templates/cio-now-template.html" />
       </list>
     </option>
   </component>
@@ -208,166 +249,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprints" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compute" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbmodels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbmodels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprints" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprints" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compute" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard_project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blueprints" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compute" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rest_api/resources/data_center/rack" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/cio-now-template/js" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\images" />
+      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\js" />
+      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\css" />
       <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\rest_api\resources\data_center\rack" />
       <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\rest_api\resources\data_center" />
-      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\dbmodels\data_center" />
-      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\dbmodels\location" />
-      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\dbmodels" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -1532,19 +1434,19 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23524962" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22875817" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53594774" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6111111" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5503356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1580,41 +1482,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_api/json_schemas/license.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/CIO Now.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/outlets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1795,9 +1662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1833,7 +1697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1849,7 +1712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1857,9 +1719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1867,9 +1726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1877,9 +1733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1887,9 +1740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1897,9 +1747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1907,33 +1754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="63" column="40" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blueprints/compute/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blueprints/compute/controllers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1941,7 +1761,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/js/bootstrap.js.download">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/css/shim.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/css/Normalize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blueprints/compute/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1949,18 +1815,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="0" column="2141" selection-start-line="0" selection-start-column="2141" selection-end-line="0" selection-end-column="2141" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blueprints/compute/controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/cio-now-template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="145">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#4276#4305#0#HTML" expanded="false" />
+            <element signature="n#img#0;n#p#0;n#div#0;n#li#7;n#ul#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

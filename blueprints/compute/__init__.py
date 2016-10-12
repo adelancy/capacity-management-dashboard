@@ -1,1 +1,2 @@
-from controllers import compute, default
+from controllers import compute, default, dashboard
+
