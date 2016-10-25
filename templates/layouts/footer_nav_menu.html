@@ -1,0 +1,212 @@
+<!--FOOTER-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="footer">
+                <footer class="copyright">
+                    <hr>
+                    <a href="https://cionow.accenture.com/Support">CIO Now Support</a>
+
+                    <a> </a><!--Space between links-->
+                    <a role="button" class="allforms" name="AccessRequestButton" id="AccessRequestButton"
+                       onclick="DisplayAccessRequestModal()">Request Access to CIO Now</a>
+                    <a> </a> <!--Space between links-->
+
+                    <a> </a> <!--Space between links-->
+
+                    <a href="https://cionow.accenture.com/VisitorStatistics" class="allforms">CIO Now Visitor
+                        Statistics</a>
+                    <a> </a><!--Space between links-->
+                    <a href="https://sites.accenture.com/publishing/CIO/Pages/default.aspx" target="_blank"
+                       class="allforms">CIO Essentials</a>
+                    <a> </a><!--Space between links-->
+                    <a href="https://circles.accenture.com/c2a84223-5ab8-4053-ab69-5de87b9dc7d6#1" class="allforms">Follow
+                        CIO Now</a>
+                    <span id="time" hidden="">64:21</span><span id="restartSessionIcon" hidden="">&nbsp;<i
+                        class="fa fa-clock-o"></i></span><span hidden="" id="sessionActualTime">539</span><span
+                        hidden="" id="contextTimeout">0</span>
+                    <p></p>
+                    <p class="text-center">© 2016 - Powered by Accenture</p>
+                    <p class="text-center" style="font-size: 12px">
+                        <span style="font-size: 14px">- CIO NOW IS FOR INTERNAL USE ONLY -</span><br>
+                        Information cannot be used in conferences, publications, or distributions outside of Accenture's
+                        Internal IT organization.<br>
+                        Please use discretion in referencing sensitive information on this site.
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+ {#   <div class="row">
+        <div class="col-md-12">
+            <div id="div-announcements">
+
+                <span id="showAnnouncements" hidden="">yes</span>
+
+                <div class="modal fade" id="announcementsModal" tabindex="-1" role="dialog" style="display: none;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-header announcements-header modal-color">
+
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <h3 id="messageTitle" class="modal-title">&nbsp;&nbsp;Announcements</h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select style="background-color: rgb(69, 69, 69); color: #DFE6E6; width: 100%; "
+                                                id="filter-popup-announcements"
+                                                onchange="filterAnnouncementsListView(this);">
+                                            <option value="0" selected="">All</option>
+                                            <option value="1">Unread</option>
+                                            <option value="2">Critical</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button type="button" onclick="showAnnouncementsAgain();" class="close"
+                                                data-dismiss="modal" aria-label="Close" title="Close"
+                                                style="font-size: xx-large;"><span aria-hidden="true"
+                                                                                   style="color: white;">×</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-body announcements-body" style="height: 460px;">
+                                <div class="row">
+                                    <div class="col-md-12 section-announcement-justified" style=""
+                                         id="announcements-list-section">
+
+
+                                        <div id="list-item-announcement-26"
+                                             class="row list-item-announcement item-announcement-0-0 list-item-announcement-justified"
+                                             style="">
+                                            <div class="col-sm-1" style="width: 35px !important;"></div>
+                                            <div class="col-sm-1" style="width: 35px !important;">
+                    <span>
+                        &nbsp;&nbsp;
+
+                    </span>
+                                            </div>
+                                            <div class="col-sm-8 list-item-announcement-justified"
+                                                 onclick="readAnnouncement(26)" data-announcementid="26">
+                                                <h4 style="margin-bottom: 0px;">
+                                                    <span title="CIO Now Sprint 2.1 goes live"><b>CIO Now Sprint 2.1 goes live</b></span>
+                                                </h4>
+                                                <h6 title="Oct 1st"
+                                                    style="font-size: smaller; margin-top: 0px; text-indent: 0.1em;">
+                                                    <span>Oct 1st</span></h6>
+                                            </div>
+                                            <div class="col-xs-2 list-item-announcement-justified"
+                                                 style="text-align: right;">
+                                                <span id="date-of-list-announcement">10/03/2016</span>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 section-announcement-justified" style=""
+                                         id="announcements-read-section" hidden="">
+                                        <div class="row read-item-announcement"
+                                             style="background-color: #006BB7; margin: 0px; ">
+                                            <div class="col-sm-1" style="width: 35px !important;">
+                                                <h4 style="margin: 0px; line-height: 56px !important; min-height: 56px !important; max-height: 56px !important; ">
+                                                    <span onclick="backToListAnnouncement()"
+                                                          class="glyphicon glyphicon-chevron-left" role="button"></span>
+                                                </h4>
+                                            </div>
+                                            <div class="col-sm-1" style="width: 35px !important;">
+                                                <span style="margin: 0px; line-height: 56px !important; min-height: 56px !important; max-height: 56px !important; "
+                                                      id="read-important-announcement"></span>
+                                            </div>
+                                            <div class="col-sm-8 list-item-announcement-justified">
+                                                <h4 style="margin-bottom: 0px;">
+                                                    <span><b id="title-short-descrip-read-announcement"
+                                                             style="font-size: 0.97em;"></b></span>
+                                                </h4>
+                                                <h6 style="font-size: smaller; margin-top: 0px; text-indent: 0.1em;">
+                                                    <span id="subtitle-short-descrip-read-announcement"></span></h6>
+                                            </div>
+                                            <div class="col-xs-2 list-item-announcement-justified"
+                                                 style="text-align: right;">
+                                                <span id="date-of-read-announcement"></span>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row" style="margin: 0px;">
+                                            <div class="col-xs-12">
+                                                <div id="textCode-read-announcement"
+                                                     style="max-height: 320px; padding-right: 5px; margin-left: 5px; overflow-y: auto;"></div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin: 0px;">
+                                <div class="col-md-11" style="text-align: left;" id="chbx-dismiss-section">
+                                    <input type="checkbox" id="chbx-dismiss-announcement"
+                                           name="chbx-dismiss-announcement" style="width: auto !important;"><span>&nbsp;Don't show these announcements again</span>
+                                </div>
+                                <div class="col-md-1" style="font-size:medium;">&nbsp;</div>
+                            </div>
+                            <div class="modal-footer announcements-footer">
+                                <div class="row">
+
+                                    <div class="col-sm-9" style="text-align: left;">
+                                        <a class="btn btn-sm" onclick="showAnnouncementsAgain();"
+                                           style="border: 1px solid rgb(197, 90, 17); border-image: none; background-color: rgb(197, 90, 17);"
+                                           href="https://cionow.accenture.com/Support">CIO Now Support</a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" id="announcement-dismiss" name="announcement-dismiss"
+                                                class="btn-default btn-sm btn" data-dismiss="modal"
+                                                onclick="showAnnouncementsAgain();">Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('#announcementsModal').on('hidden.bs.modal', function () {
+                        $("#textCode-read-announcement").html("");
+                    })
+                </script>
+            </div>
+            <div class="modal fade" id="messagesModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header messagesModal-header modal-color">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Close">
+                                <span aria-hidden="true" style="color: white;">×</span></button>
+                            <h4 id="messageTitle" class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body messagesModal-body">
+
+                        </div>
+
+                        <div class="modal-footer messagesModal-footer">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn-primary btn-sm btn" data-dismiss="modal">Ok
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>#}
+</div>

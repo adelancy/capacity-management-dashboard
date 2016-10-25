@@ -15,13 +15,13 @@
             type="text/javascript"></script>
 
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='cio-now-template/shim.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cio-now-template/css/shim.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.css"/>
 
     <link href="{{ url_for('static', filename='cio-now-template/css/stylesheet.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/layout.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/bootstrap-theme.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='cio-now-template/css/boostrap-theme.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='cio-now-template/css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/jquery.gridster.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/DashboardsTableau.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/Normalize.css') }}" rel="stylesheet">
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/AccessRequest.js.download') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/Index.js.download') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/polyfiller.js.download') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/query.smartmenus.js.download') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/jquery.smartmenus.js.download') }}"></script>
 
 
     <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/moment.js.download') }}"></script>
@@ -48,12 +48,11 @@
     <link href="{{ url_for('static', filename='cio-now-template/css/sm-blue.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/ml-feedback.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/sm-core-css.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='cio-now-template/css//bootstrap-datetimepicker.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='cio-now-template/css/bootstrap-datetimepicker.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/Feedback.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/NotificationService.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cio-now-template/css/sm-core-css.css') }}" rel="stylesheet">
-
 
     <style type="text/css"> [data-col="4"] {
         left: 1115px;
@@ -281,7 +280,7 @@
     </style>
 </head>
 <body class="hasGoogleVoiceExt">
-
+<!--Breadcrumb Header -->
 <div class="container">
     <header>
         <div class="container">
@@ -1004,7 +1003,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 arrow-img"
                                              style="padding-left:3px; padding-right:0px; padding-top:4px">
-                                            <img src="CIO%20Now_files/asc.gif" alt="asc" style=" padding-bottom: 8px; "
+                                            <img src="{{ url_for('static', filename='cio-now-template/images/asc.gif') }}" alt="asc" style=" padding-bottom: 8px; "
                                                  class="orentation">
                                             <span class="replace-color-asc percentage" data-original-title="" title="">3%</span>
                                         </div>
@@ -1027,7 +1026,7 @@
 
                                             <div class="row arrow-description">
                                                 <div class="col-xs-2" style="padding-left:4px">
-                                                    <img src="CIO%20Now_files/Stream_Circle downloads.png"
+                                                    <img src="{{ url_for('static',  filename='cio-now-template/images/Stream_Circle downloads.png')}}"
                                                          alt="Stream_Circle downloads" style="width:40px;">
                                                 </div>
                                                 <div class="col-xs-10">
@@ -1037,7 +1036,7 @@
                                                         </div>
                                                         <div class="col-xs-7 arrow-img"
                                                              style="padding-left: 25px; padding-right:0px">
-                                                            <img src="CIO%20Now_files/desc.gif" alt="desc"
+                                                            <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc"
                                                                  style="padding-bottom: 8px;" class="orentation">
                                                             <span class="replace-color-desc percentage"
                                                                   data-original-title="" title="">31%</span>
@@ -1084,7 +1083,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 arrow-img"
                                              style="padding-left:3px; padding-right:0px; padding-top:4px">
-                                            <img src="CIO%20Now_files/desc.gif" alt="desc"
+                                            <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc"
                                                  style=" padding-bottom: 8px; " class="orentation">
                                             <span class="replace-color-desc percentage" data-original-title="" title="">8%</span>
                                         </div>
@@ -1107,7 +1106,7 @@
 
                                             <div class="row arrow-description">
                                                 <div class="col-xs-2" style="padding-left:4px">
-                                                    <img src="CIO%20Now_files/KX contributions.png"
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/KX contributions.png') }}"
                                                          alt="KX contributions" style="width:40px;">
                                                 </div>
                                                 <div class="col-xs-10">
@@ -1117,7 +1116,7 @@
                                                         </div>
                                                         <div class="col-xs-7 arrow-img"
                                                              style="padding-left: 25px; padding-right:0px">
-                                                            <img src="CIO%20Now_files/desc.gif" alt="desc"
+                                                            <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc"
                                                                  style="padding-bottom: 8px;" class="orentation">
                                                             <span class="replace-color-desc percentage"
                                                                   data-original-title="" title="">10%</span>
@@ -1164,7 +1163,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 arrow-img"
                                              style="padding-left:3px; padding-right:0px; padding-top:4px">
-                                            <img src="CIO%20Now_files/desc.gif" alt="desc"
+                                            <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc"
                                                  style=" padding-bottom: 8px; " class="orentation">
                                             <span class="replace-color-desc percentage" data-original-title="" title="">21%</span>
                                         </div>
@@ -1187,7 +1186,7 @@
 
                                             <div class="row arrow-description">
                                                 <div class="col-xs-2" style="padding-left:4px">
-                                                    <img src="CIO%20Now_files/MX videos upload.png"
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/MX videos upload.png') }}"
                                                          alt="MX videos upload" style="width:40px;">
                                                 </div>
                                                 <div class="col-xs-10">
@@ -1197,7 +1196,7 @@
                                                         </div>
                                                         <div class="col-xs-7 arrow-img"
                                                              style="padding-left: 25px; padding-right:0px">
-                                                            <img src="CIO%20Now_files/desc.gif" alt="desc"
+                                                            <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc"
                                                                  style="padding-bottom: 8px;" class="orentation">
                                                             <span class="replace-color-desc percentage"
                                                                   data-original-title="" title="">15%</span>
@@ -1253,7 +1252,7 @@
                         <div id="skypeAudioAndVideoContainer1636111936935393753">
                             <div class="row arrow-description">
                                 <div class="col-xs-2">
-                                    <img src="CIO%20Now_files/Audio.png" alt="Audio" style="width:40px;">
+                                    <img src="{{ url_for('static', filename='cio-now-template/images/Audio.png') }}" alt="Audio" style="width:40px;">
                                 </div>
                                 <div class="col-xs-10">
                                     <div class="row">
@@ -1264,7 +1263,7 @@
                                             <div class="row">
 
                                                 <div class="col-xs-6" style="text-align: right">
-                                                    <img src="CIO%20Now_files/desc.gif" alt="desc" class="orentation">
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc" class="orentation">
 
                                                 </div>
                                                 <div class="col-xs-2" style="text-align: left">
@@ -1287,7 +1286,7 @@
                         <div id="skypeAudioAndVideoContainer2636111936935393753">
                             <div class="row arrow-description">
                                 <div class="col-xs-2">
-                                    <img src="CIO%20Now_files/Video.png" alt="Video" style="width:40px;">
+                                    <img src="{{ url_for('static', filename='cio-now-template/images/Video.png') }}" alt="Video" style="width:40px;">
                                 </div>
                                 <div class="col-xs-10">
                                     <div class="row">
@@ -1298,7 +1297,7 @@
                                             <div class="row">
 
                                                 <div class="col-xs-6" style="text-align: right">
-                                                    <img src="CIO%20Now_files/desc.gif" alt="desc" class="orentation">
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc" class="orentation">
 
                                                 </div>
                                                 <div class="col-xs-2" style="text-align: left">
@@ -1321,7 +1320,7 @@
                         <div id="skypeAudioAndVideoContainer3636111936935393753">
                             <div class="row arrow-description">
                                 <div class="col-xs-2">
-                                    <img src="CIO%20Now_files/Lync Mobile.png" alt="Lync Mobile" style="width:40px;">
+                                    <img src="{{ url_for('static', filename='cio-now-template/images/Lync Mobile.png') }}" alt="Lync Mobile" style="width:40px;">
                                 </div>
                                 <div class="col-xs-10">
                                     <div class="row">
@@ -1332,7 +1331,7 @@
                                             <div class="row">
 
                                                 <div class="col-xs-6" style="text-align: right">
-                                                    <img src="CIO%20Now_files/desc.gif" alt="desc" class="orentation">
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc" class="orentation">
 
                                                 </div>
                                                 <div class="col-xs-2" style="text-align: left">
@@ -1481,7 +1480,7 @@
                         <div id="peopleEnablement1636111936935862444">
                             <div class="row arrow-description">
                                 <div class="col-xs-2">
-                                    <img src="CIO%20Now_files/Workstations deployed.png" alt="Workstations deployed"
+                                    <img src="{{ url_for('static', filename='cio-now-template/images/Workstations deployed.png') }}" alt="Workstations deployed"
                                          style="width:40px;">
                                 </div>
                                 <div class="col-xs-10">
@@ -1493,7 +1492,7 @@
                                             <div class="row">
 
                                                 <div class="col-xs-6" style="text-align: right">
-                                                    <img src="CIO%20Now_files/asc.gif" alt="asc" class="orentation">
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/asc.gif') }}" alt="asc" class="orentation">
 
                                                 </div>
                                                 <div class="col-xs-2" style="text-align: left">
@@ -1516,7 +1515,7 @@
                         <div id="peopleEnablement2636111936935862444">
                             <div class="row arrow-description">
                                 <div class="col-xs-2">
-                                    <img src="CIO%20Now_files/Mobile devices.png" alt="Mobile devices"
+                                    <img src="{{ url_for('static', filename='cio-now-template/images/Mobile devices.png') }}" alt="Mobile devices"
                                          style="width:40px;">
                                 </div>
                                 <div class="col-xs-10">
@@ -1528,7 +1527,7 @@
                                             <div class="row">
 
                                                 <div class="col-xs-6" style="text-align: right">
-                                                    <img src="CIO%20Now_files/desc.gif" alt="desc" class="orentation">
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc" class="orentation">
 
                                                 </div>
                                                 <div class="col-xs-2" style="text-align: left">
@@ -1551,7 +1550,7 @@
                         <div id="peopleEnablement3636111936935862444">
                             <div class="row arrow-description">
                                 <div class="col-xs-2">
-                                    <img src="{{ url_for('static', filename='cio-now-template/images/SharePoint sites.png') }}" alt="SharePoint sites"
+                                    <img src="{{ url_for('static', filename='cio-now-template/cio-now-template/images/SharePoint sites.png') }}" alt="SharePoint sites"
                                          style="width:40px;">
                                 </div>
                                 <div class="col-xs-10">
@@ -1563,7 +1562,7 @@
                                             <div class="row">
 
                                                 <div class="col-xs-6" style="text-align: right">
-                                                    <img src="CIO%20Now_files/desc.gif" alt="desc" class="orentation">
+                                                    <img src="{{ url_for('static', filename='cio-now-template/images/desc.gif') }}" alt="desc" class="orentation">
 
                                                 </div>
                                                 <div class="col-xs-2" style="text-align: left">
@@ -1809,7 +1808,7 @@
                                             </div>
                                             <div class="col-xs-7 arrow-img"
                                                  style="padding-right:0px; padding-left:30px">
-                                                <img src="CIO%20Now_files/asc.gif" alt="asc"
+                                                <img src="{{ url_for('static', filename='cio-now-template/images/asc.gif') }}" alt="asc"
                                                      style="padding-bottom: 8px;" class="orentation">
                                                 <span class="replace-color-asc percentage" data-original-title=""
                                                       title="">17%</span>
@@ -1834,7 +1833,7 @@
                                             </div>
                                             <div class="col-xs-7 arrow-img"
                                                  style="padding-right:0px; padding-left:30px">
-                                                <img src="CIO%20Now_files/asc.gif" alt="asc"
+                                                <img src="{{ url_for('static', filename='cio-now-template/images/asc.gif') }}" alt="asc"
                                                      style="padding-bottom: 8px;" class="orentation">
                                                 <span class="replace-color-asc percentage" data-original-title=""
                                                       title="">36%</span>
@@ -2287,7 +2286,7 @@
                                     <h2>Service Pulse</h2>
                                 </td>
                                 <!-- In the img src below copy/paste the right arrow value.........https://cionow.accenture.com/content/Images/ExecSum/Good.png..........content/Images/ExecSum/Average.png..........content/Images/ExecSum/Bad.png-->
-                                <td><img src="CIO%20Now_files/Bad.png" alt="Arrow"></td>
+                                <td><img src="{{ url_for('static', filename='cio-now-template/images/Bad.png') }}" alt="Arrow"></td>
                             </tr>
                             </tbody>
                         </table>
@@ -2564,7 +2563,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/moment.min.js.download') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/Chart.min.js.download') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/tooltipsy.min.js.download') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/jquery.gridster.min.js.downloadd') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/jquery.gridster.min.js.download') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/d3.min.js.download') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='cio-now-template/js/d3.min.js.download') }}"></script>
 

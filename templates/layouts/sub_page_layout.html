@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block pg_content %}
+
+    <div class="container">
+        <div class="body-content body-adjustment">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>{{ page_name }}</h2>
+                    <br><!--Here goes the rich text editor-->
+                    <div class="page-edition">
+                        <div class="tableauPlaceholder-ArchServicesDB">
+                            {% block sub_pg_content %}
+                                {#<iframe id="tableauFrame-ar1" class="tableauViz"
+                                        style="margin: 0px; padding: 0px; border: currentColor; width: 1120px; height: 1050px; display: block; background-color: black;"
+                                        src="https://bi6.accenture.com/views/ArchitectureServiceOperationDashboard/SummaryDashboard?:embed=y&amp;:showVizHome=no&amp;:host_url=https%3A%2F%2Fbi6.accenture.com%2F&amp;:tabs=no&amp;:toolbar=no&amp;:loadOrderID=0"
+                                        name="tableauFrame-ar1" width="300" height="150" frameborder="0" marginwidth="0"
+                                        marginheight="0" scrolling="no" seamless="seamless"></iframe>#}
+                            {% endblock sub_pg_content%}
+                        </div><!--Call to the code of the page-->
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" align="right">
+                    <input hidden="" id="strDate" value="{{ last_modified_date }}">
+                    <input hidden="" id="strEID" value="{{ last_modified_user }}">
+                    <div style="font-style:italic;font-size:11px;color:#AAAAAA; cursor: default"
+                         class="userInformation">
+
+                        <div align="right">
+                            <div>
+                                Last modified at <span>{{ last_modified_date }} </span>
+                                by  
+                                <span class="author" data-user-id="{{ last_modified_user }}">
+                                    {{ last_modified_user }}
+                                </span>
+                            </div>
+                        </div>
+
+                    </div> <!--Call to Last modified-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock pg_content %}

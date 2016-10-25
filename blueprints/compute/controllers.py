@@ -1,3 +1,4 @@
+import datetime
 from flask import Blueprint, render_template, abort, redirect, url_for
 from jinja2 import TemplateNotFound
 
@@ -20,4 +21,10 @@ def cio_now_template():
 
 @compute.route('/requirements')
 def show_dashboard():
-    return render_template('blueprints/compute/gather_requirements.html')
+    return render_template(
+        'blueprints/compute/gather_requirements.html',
+        app_name='UHA PIC',
+        page_name='Team Requirements',
+        last_modified_user='Delancy, Adrian P.',
+        last_modified_date=datetime.datetime.now()
+    )

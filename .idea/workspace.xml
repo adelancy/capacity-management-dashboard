@@ -2,64 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d68c134d-4a5e-4757-8073-cf2287628835" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/AccessRequest.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/AccessRequest.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Audio.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Audio.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Bad.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Bad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Chart.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Chart.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Chart.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/Chart.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/DashboardsTableau.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/DashboardsTableau.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Feedback.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Feedback.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Home2.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Home2.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Home2.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/Home2.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Index.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/Index.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/KX contributions.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/KX contributions.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Lync Mobile.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Lync Mobile.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/MX videos upload.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/MX videos upload.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Mobile devices.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Mobile devices.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Normalize.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/Normalize.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/NotificationService.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/NotificationService.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/NotificationService.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/images/NotificationService.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/SharePoint sites.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/SharePoint sites.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Stream_Circle downloads.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Stream_Circle downloads.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Video.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Video.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/Workstations deployed.png" afterPath="$PROJECT_DIR$/static/cio-now-template/images/Workstations deployed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/asc.gif" afterPath="$PROJECT_DIR$/static/cio-now-template/images/asc.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-datetimepicker.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/bootstrap-datetimepicker.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-datetimepicker.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/bootstrap-datetimepicker.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-theme.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bootstrap.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/bootstrap.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/bullet.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/bullet.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/stylesheet.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/d3.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/d3.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/datetimepicker-portfolio.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/datetimepicker-portfolio.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/desc.gif" afterPath="$PROJECT_DIR$/static/cio-now-template/images/desc.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/font-awesome.min.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jQuery.lyncpresence.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jQuery.lyncpresence.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery-1.12.3.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery-1.12.3.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.gridster.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/jquery.gridster.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.gridster.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery.gridster.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.redirect.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery.redirect.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquery.smartmenus.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquery.smartmenus.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/jquerysession.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/jquerysession.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/layout(1).css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/layout(1).css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/layout.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/layout.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/layout.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/layout.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/ml-feedback.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/ml-feedback.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/moment.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/moment.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/moment.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/moment.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/nv.d3.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/nv.d3.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/polyfiller.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/polyfiller.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/shim.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/shim.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/sm-blue.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/sm-blue.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/sm-core-css.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/sm-core-css.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/CIO Now_files/tooltipsy.min.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/tooltipsy.min.js.download" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/CIO Now.html" afterPath="$PROJECT_DIR$/templates/cio-now-template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/footer_nav_menu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/grid_widget_summary_layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/header_with_breadcrumb.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/sub_page_layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layouts/widget_placeholder.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/cio-now-template/images/NotificationService.js.download" afterPath="$PROJECT_DIR$/static/cio-now-template/js/NotificationService.js.download" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blueprints/compute/__init__.py" afterPath="$PROJECT_DIR$/blueprints/compute/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blueprints/compute/controllers.py" afterPath="$PROJECT_DIR$/blueprints/compute/controllers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/cio-now-template/css/layout(1).css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/layout(1).css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/cio-now-template/css/layout.css" afterPath="$PROJECT_DIR$/static/cio-now-template/css/layout.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html" afterPath="$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cio-now-template.html" afterPath="$PROJECT_DIR$/templates/cio-now-template.html" />
     </list>
     <ignored path="dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +28,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/dashboard_project$Rest_API_Tests.coverage" NAME="Rest API Tests Coverage Results" MODIFIED="1476108874165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/dashboard_project$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1476230377130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dashboard_project$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1477370844816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dashboard$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1475166240324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -85,48 +40,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="controllers.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blueprints/compute/controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+            <state relative-caret-position="425">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding>
-                <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blueprints/compute/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cio-now-template.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/cio-now-template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-              <folding>
-                <element signature="e#4276#4305#0#HTML" expanded="false" />
-                <element signature="n#img#0;n#p#0;n#div#0;n#li#7;n#ul#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,9 +55,43 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="221">
+              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header_with_breadcrumb.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/layouts/header_with_breadcrumb.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="108" selection-start-line="5" selection-start-column="108" selection-end-line="5" selection-end-column="108" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gather_requirements.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sub_page_layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/layouts/sub_page_layout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding>
+                <element signature="e#1710#1781#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +101,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -158,16 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dbmodels/rack/devices/wireless.py" />
-        <option value="$PROJECT_DIR$/blueprints/compute/templates/gather_requirements.html" />
-        <option value="$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html" />
-        <option value="$PROJECT_DIR$/dbmodels/license.py" />
-        <option value="$PROJECT_DIR$/dbmodels/rack/join__rack_pdu.py" />
-        <option value="$PROJECT_DIR$/dbmodels/rack/circuit.py" />
-        <option value="$PROJECT_DIR$/dbmodels/rack/outlets.py" />
-        <option value="$PROJECT_DIR$/dbmodels/rack/pdu.py" />
-        <option value="$PROJECT_DIR$/rest_api/json_schemas/rack/schemas.py" />
-        <option value="$PROJECT_DIR$/dbmodels/rack/rack.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/devices/bm.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/devices/firewall.py" />
         <option value="$PROJECT_DIR$/dbmodels/rack/devices/load_balancer.py" />
@@ -203,12 +147,22 @@
         <option value="$PROJECT_DIR$/rest_api/resources/data_center/__init__.py" />
         <option value="$PROJECT_DIR$/rest_api/resources/data_center/rack/__init__.py" />
         <option value="$PROJECT_DIR$/blueprints/compute/forms/requirements.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/blueprints/compute/__init__.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/CIO Now.html" />
-        <option value="$PROJECT_DIR$/blueprints/compute/controllers.py" />
+        <option value="$PROJECT_DIR$/static/cio-now-template/css/layout.css" />
+        <option value="$PROJECT_DIR$/static/cio-now-template/css/layout(1).css" />
+        <option value="$PROJECT_DIR$/templates/blueprints/layouts/header_with_breadcrumb.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/templates/layouts/footer_nav_menu.html" />
         <option value="$PROJECT_DIR$/templates/cio-now-template.html" />
+        <option value="$PROJECT_DIR$/templates/layouts/widget_placeholder.html" />
+        <option value="$PROJECT_DIR$/templates/layouts/grid_widget_layout.html" />
+        <option value="$PROJECT_DIR$/templates/layouts/sub_page_layout.html" />
+        <option value="$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/layouts/header_with_breadcrumb.html" />
+        <option value="$PROJECT_DIR$/blueprints/compute/controllers.py" />
       </list>
     </option>
   </component>
@@ -219,10 +173,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1358" />
+    <option name="y" value="-288" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -249,27 +203,113 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blueprints" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compute" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rest_api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/cio-now-template/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\images" />
+      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\templates" />
       <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\js" />
+      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\images" />
       <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\static\cio-now-template\css" />
       <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\rest_api\resources\data_center\rack" />
-      <recent name="C:\Users\adrian.p.delancy\Documents\UHA\development\dashboard\rest_api\resources\data_center" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -1431,22 +1471,22 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1358" y="-288" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23524962" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32780084" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53594774" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33195022" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6111111" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2852697" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5503356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1482,83 +1522,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/outlets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/devices/load_balancer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_api/json_schemas/location.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/rack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/license.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/location.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rest_api/resources/data_center/vms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/join__rack_pdu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodels/data_center/rack/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest_api/unit_tests/test_location.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1715,13 +1678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rest_api/resources/data_center/locations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rest_api/resources/team/team.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1764,14 +1720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/cio-now-template/js/bootstrap.js.download">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1806,7 +1754,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1822,27 +1770,181 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="0" column="2141" selection-start-line="0" selection-start-column="2141" selection-end-line="0" selection-end-column="2141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/js/NotificationService.js.download">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest_api/resources/data_center/locations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/js/jQuery.lyncpresence.js.download">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="50" column="395" selection-start-line="50" selection-start-column="395" selection-end-line="50" selection-end-column="395" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/css/layout(1).css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cio-now-template/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3094">
+          <caret line="395" column="0" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/footer_nav_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3094">
+          <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
+          <folding>
+            <marker date="1477363630218" expanded="false" signature="2418:2432" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="2824:2830" ph=" " />
+            <marker date="1477363630218" expanded="false" signature="2830:2836" ph=" " />
+            <marker date="1477363630218" expanded="false" signature="3012:3076" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="3919:3939" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="4056:4069" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="4327:4341" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="4908:4931" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="5013:5036" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="5090:5096" ph=" " />
+            <marker date="1477363630218" expanded="false" signature="5096:5102" ph=" " />
+            <marker date="1477363630218" expanded="false" signature="5447:5466" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="5788:5844" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="6131:6149" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="6802:6842" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="6918:6941" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="7003:7104" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="7499:7522" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="7586:7687" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="7994:8013" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="8188:8206" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="8333:8389" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="8715:8733" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="9040:9052" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="9268:9342" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="9620:9632" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="9697:9714" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="9916:9939" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="9947:9953" ph=" " />
+            <marker date="1477363630218" expanded="false" signature="10097:10114" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="10116:10122" ph=" " />
+            <marker date="1477363630218" expanded="false" signature="10356:10373" ph="..." />
+            <marker date="1477363630218" expanded="false" signature="10524:10615" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/widget_placeholder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cio-now-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="923" column="0" selection-start-line="923" selection-start-column="0" selection-end-line="923" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/grid_widget_summary_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
+            <marker date="1477369081254" expanded="false" signature="119738:120329" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/sub_page_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#1710#1781#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/blueprints/compute/gather_requirements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/header_with_breadcrumb.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="108" selection-start-line="5" selection-start-column="108" selection-end-line="5" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blueprints/compute/controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        <state relative-caret-position="425">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cio-now-template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding>
-            <element signature="e#4276#4305#0#HTML" expanded="false" />
-            <element signature="n#img#0;n#p#0;n#div#0;n#li#7;n#ul#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
