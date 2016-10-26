@@ -2,10 +2,13 @@ from flask_script import Manager, Server
 from app import create_app
 from extensions.sql_alchemy import sqldb
 
-import dbmodels.location as loc
+import dbmodels.data_center.location as loc
 
-manager = Manager(create_app)
-server = Server(port=5000, use_debugger=True)
+manager = Manager(lambda config_filename, config_options: create_app(config_filename, config_options))
+manager.add_option('-cf', '--configuration-file', dest='config_filename', default=None)
+manager.add_option('-co', '--configuration-options', dest='config_options', default=None)
+
+server = Server(port=5000, use_debugger=True, use_reloader=True)
 manager.add_command("runserver", server)
 
 

@@ -8,12 +8,11 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=11=edge">
 
-    <title> CIO Now</title>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript">
-    </script>
-
+    <title>
+        {% block pg_specific_title %}
+            {{ app_name }}
+        {% endblock %}
+    </title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='cio-now-template/css/shim.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.css"/>
@@ -69,236 +68,232 @@
     {% block pg_specific_css %}
     {% endblock pg_specific_css %}
 
-    <title>
-        {% block pg_specific_title %}
-           {{ app_name }}
-        {% endblock %}
-    </title>
+
 
     <style type="text/css"> [data-col="4"] {
-    left: 1115px;
-}
+        left: 1115px;
+    }
 
-[data-col="3"] {
-    left: 744px;
-}
+    [data-col="3"] {
+        left: 744px;
+    }
 
-[data-col="2"] {
-    left: 373px;
-}
+    [data-col="2"] {
+        left: 373px;
+    }
 
-[data-col="1"] {
-    left: 2px;
-}
+    [data-col="1"] {
+        left: 2px;
+    }
 
-[data-row="25"] {
-    top: 6722px;
-}
+    [data-row="25"] {
+        top: 6722px;
+    }
 
-[data-row="24"] {
-    top: 6442px;
-}
+    [data-row="24"] {
+        top: 6442px;
+    }
 
-[data-row="23"] {
-    top: 6162px;
-}
+    [data-row="23"] {
+        top: 6162px;
+    }
 
-[data-row="22"] {
-    top: 5882px;
-}
+    [data-row="22"] {
+        top: 5882px;
+    }
 
-[data-row="21"] {
-    top: 5602px;
-}
+    [data-row="21"] {
+        top: 5602px;
+    }
 
-[data-row="20"] {
-    top: 5322px;
-}
+    [data-row="20"] {
+        top: 5322px;
+    }
 
-[data-row="19"] {
-    top: 5042px;
-}
+    [data-row="19"] {
+        top: 5042px;
+    }
 
-[data-row="18"] {
-    top: 4762px;
-}
+    [data-row="18"] {
+        top: 4762px;
+    }
 
-[data-row="17"] {
-    top: 4482px;
-}
+    [data-row="17"] {
+        top: 4482px;
+    }
 
-[data-row="16"] {
-    top: 4202px;
-}
+    [data-row="16"] {
+        top: 4202px;
+    }
 
-[data-row="15"] {
-    top: 3922px;
-}
+    [data-row="15"] {
+        top: 3922px;
+    }
 
-[data-row="14"] {
-    top: 3642px;
-}
+    [data-row="14"] {
+        top: 3642px;
+    }
 
-[data-row="13"] {
-    top: 3362px;
-}
+    [data-row="13"] {
+        top: 3362px;
+    }
 
-[data-row="12"] {
-    top: 3082px;
-}
+    [data-row="12"] {
+        top: 3082px;
+    }
 
-[data-row="11"] {
-    top: 2802px;
-}
+    [data-row="11"] {
+        top: 2802px;
+    }
 
-[data-row="10"] {
-    top: 2522px;
-}
+    [data-row="10"] {
+        top: 2522px;
+    }
 
-[data-row="9"] {
-    top: 2242px;
-}
+    [data-row="9"] {
+        top: 2242px;
+    }
 
-[data-row="8"] {
-    top: 1962px;
-}
+    [data-row="8"] {
+        top: 1962px;
+    }
 
-[data-row="7"] {
-    top: 1682px;
-}
+    [data-row="7"] {
+        top: 1682px;
+    }
 
-[data-row="6"] {
-    top: 1402px;
-}
+    [data-row="6"] {
+        top: 1402px;
+    }
 
-[data-row="5"] {
-    top: 1122px;
-}
+    [data-row="5"] {
+        top: 1122px;
+    }
 
-[data-row="4"] {
-    top: 842px;
-}
+    [data-row="4"] {
+        top: 842px;
+    }
 
-[data-row="3"] {
-    top: 562px;
-}
+    [data-row="3"] {
+        top: 562px;
+    }
 
-[data-row="2"] {
-    top: 282px;
-}
+    [data-row="2"] {
+        top: 282px;
+    }
 
-[data-row="1"] {
-    top: 2px;
-}
+    [data-row="1"] {
+        top: 2px;
+    }
 
-[data-sizey="1"] {
-    height: 276px;
-}
+    [data-sizey="1"] {
+        height: 276px;
+    }
 
-[data-sizey="2"] {
-    height: 556px;
-}
+    [data-sizey="2"] {
+        height: 556px;
+    }
 
-[data-sizey="3"] {
-    height: 836px;
-}
+    [data-sizey="3"] {
+        height: 836px;
+    }
 
-[data-sizey="4"] {
-    height: 1116px;
-}
+    [data-sizey="4"] {
+        height: 1116px;
+    }
 
-[data-sizey="5"] {
-    height: 1396px;
-}
+    [data-sizey="5"] {
+        height: 1396px;
+    }
 
-[data-sizey="6"] {
-    height: 1676px;
-}
+    [data-sizey="6"] {
+        height: 1676px;
+    }
 
-[data-sizey="7"] {
-    height: 1956px;
-}
+    [data-sizey="7"] {
+        height: 1956px;
+    }
 
-[data-sizey="8"] {
-    height: 2236px;
-}
+    [data-sizey="8"] {
+        height: 2236px;
+    }
 
-[data-sizey="9"] {
-    height: 2516px;
-}
+    [data-sizey="9"] {
+        height: 2516px;
+    }
 
-[data-sizey="10"] {
-    height: 2796px;
-}
+    [data-sizey="10"] {
+        height: 2796px;
+    }
 
-[data-sizey="11"] {
-    height: 3076px;
-}
+    [data-sizey="11"] {
+        height: 3076px;
+    }
 
-[data-sizey="12"] {
-    height: 3356px;
-}
+    [data-sizey="12"] {
+        height: 3356px;
+    }
 
-[data-sizey="13"] {
-    height: 3636px;
-}
+    [data-sizey="13"] {
+        height: 3636px;
+    }
 
-[data-sizey="14"] {
-    height: 3916px;
-}
+    [data-sizey="14"] {
+        height: 3916px;
+    }
 
-[data-sizey="15"] {
-    height: 4196px;
-}
+    [data-sizey="15"] {
+        height: 4196px;
+    }
 
-[data-sizey="16"] {
-    height: 4476px;
-}
+    [data-sizey="16"] {
+        height: 4476px;
+    }
 
-[data-sizey="17"] {
-    height: 4756px;
-}
+    [data-sizey="17"] {
+        height: 4756px;
+    }
 
-[data-sizey="18"] {
-    height: 5036px;
-}
+    [data-sizey="18"] {
+        height: 5036px;
+    }
 
-[data-sizey="19"] {
-    height: 5316px;
-}
+    [data-sizey="19"] {
+        height: 5316px;
+    }
 
-[data-sizey="20"] {
-    height: 5596px;
-}
+    [data-sizey="20"] {
+        height: 5596px;
+    }
 
-[data-sizey="21"] {
-    height: 5876px;
-}
+    [data-sizey="21"] {
+        height: 5876px;
+    }
 
-[data-sizey="22"] {
-    height: 6156px;
-}
+    [data-sizey="22"] {
+        height: 6156px;
+    }
 
-[data-sizey="23"] {
-    height: 6436px;
-}
+    [data-sizey="23"] {
+        height: 6436px;
+    }
 
-[data-sizey="24"] {
-    height: 6716px;
-}
+    [data-sizey="24"] {
+        height: 6716px;
+    }
 
-[data-sizex="1"] {
-    width: 367px;
-}
+    [data-sizex="1"] {
+        width: 367px;
+    }
 
-[data-sizex="2"] {
-    width: 738px;
-}
+    [data-sizex="2"] {
+        width: 738px;
+    }
 
-[data-sizex="3"] {
-    width: 1109px;
-}
-</style>
+    [data-sizex="3"] {
+        width: 1109px;
+    }
+    </style>
 </head>
 <body>
 
@@ -310,7 +305,6 @@
 </div>
 
 
-
 {% include "layouts/footer_nav_menu.html" %}
 
 <!-- Load Javascript dependencies -->
@@ -318,6 +312,9 @@
     $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript">
+</script>
 <script type="text/javascript"
         src="{{ url_for('static', filename='cio-now-template/js/d3.min.js.download') }}"></script>
 <script type="text/javascript"

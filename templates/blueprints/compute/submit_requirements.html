@@ -1,0 +1,75 @@
+{% extends "layouts/sub_page_layout.html" %}
+{% from "macros/forms.html" import render_text_input, render_submit_button %}
+
+{% block sub_pg_content %}
+    {% block sub_tittle %} <h3>Select a Team or Create a New One</h3> {% endblock %}
+    <div class="container">
+        {% block requirement_forms %}
+            <!--Team Selection Dropdown Menu -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="team-select-dropdown" class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Select Team
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <!--Todo: dynamically query for options -->
+                            <li><a href="#">GDN</a></li>
+                            <li><a href="#">CIO</a></li>
+                            <li><a href="#">External</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="team-form" class="form-group">
+                        <form method="POST" enctype="multipart/form-data" action="{{ url_for('compute.create_team') }}">
+                            {{ forms.create_team.hidden_tag() }}
+                            {% for field in forms.create_team %}
+                                {% if field.type == "StringField" or field.type == 'TextAreaField' %}
+                                    <div class="row">
+                                        {{ render_text_input(field) }}
+                                    </div>
+                                    <br>
+                                {% endif %}
+                            {% endfor %}
+
+                            <div class="row">
+                                {{ render_submit_button(forms.create_team.submit) }}
+                            </div>
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="team-form" class="form-group">
+
+                        <form method="POST" enctype="multipart/form-data" action="{{ url_for('compute.create_team') }}">
+                            {{ forms.create_team.hidden_tag() }}
+                            {% for field in forms.create_virtual %}
+                                {% if field.type == "StringField" or field.type == 'TextAreaField' %}
+                                    <div class="row">
+                                        {{ render_text_input(field) }}
+                                    </div>
+                                    <br>
+                                {% endif %}
+                            {% endfor %}
+
+                            <div class="row">
+                                {{ render_submit_button(forms.create_virtual.submit) }}
+                            </div>
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        {% endblock requirement_forms %}
+    </div>
+
+{% endblock %}

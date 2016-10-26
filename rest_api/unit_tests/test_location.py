@@ -4,7 +4,7 @@ import unittest
 from flask_restful import url_for
 from flask_testing import TestCase
 
-import config as cfg
+import base_config as cfg
 from app import create_app
 
 from dbmodels.data_center.location import Location

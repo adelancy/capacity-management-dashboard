@@ -1,0 +1,20 @@
+{% macro render_text_input(field, id='', class='form-control', label_col_size='col-sm-2', field_col_size='col-sm-10') -%}
+        {{ field.label(class_="{0} col-form-label".format(label_col_size)) }}
+        {% if id=='' %}
+            {% set id = field.id %}
+        {% endif %}
+        <div class="{{ field_col_size }}">
+            {{ field(class_=class, id=id, placeholder=field.label.text, **kwargs) }}
+        </div>
+{%- endmacro %}
+
+{% macro render_submit_button(field, id='', class='form-control', col_size='col-sm-10', col_size_offset='col-sm-offset-2') -%}
+    <div class="{{ '{0} {1}'.format(col_size, col_size_offset) }}">
+        {{ field(
+        class_="btn btn-primary",
+        placeholder=field.label.text,
+        width="200px"
+        ) }}
+    </div>
+{%- endmacro %}
+
