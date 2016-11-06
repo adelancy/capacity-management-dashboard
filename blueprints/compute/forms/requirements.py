@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, TextAreaField,  SubmitField, IntegerField
+from wtforms import StringField, TextAreaField, SubmitField, IntegerField, FloatField, SelectField
 from wtforms.validators import DataRequired
 
 
@@ -26,6 +26,25 @@ class CreateVirtualRequirements(FlaskForm):
 
 
 class CreatePhysicalRequirements(FlaskForm):
+    name = StringField('Label ID', validators=[DataRequired(message='Please enter a unique device label name')])
+    model_name = StringField('Chasis Model', validators=[DataRequired()])
+    vendor = StringField('Vendor', validators=[DataRequired])
+    part_number = StringField('Part Num', validators=[DataRequired()])
+    procs = StringField('Processors', validators=[DataRequired()])
+    ram = StringField('RAM (GB)', validators=[DataRequired()])
+    storage = IntegerField('Storage Space (GB)', validators=[DataRequired()])
+    os_type = SelectField('Base Operating System', choices=[('esxi', 'ESXI'), ('rhel', 'RHEL')])
+
+    power_draw = FloatField('Power Rating (KW)')
+    mgmt_ports = IntegerField('OOB MGMT Ports', validators=[DataRequired])
+    rus = StringField('Size (RUs)', validators=[DataRequired()])
+
+    # Will need to allow the user to select the associated Chasis
+    sfp_count = IntegerField('Num of SFPs')
+    sfp_type = StringField('SFP Type', validators=[DataRequired()])
+    sfp_part_number = StringField('SFP Part Number')
+    sfp_network_ports = StringField('Ports per SFP')
+
     submit = _submit
 
 

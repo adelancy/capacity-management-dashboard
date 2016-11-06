@@ -8,6 +8,18 @@
         </div>
 {%- endmacro %}
 
+
+{% macro render_select_field(field, id='', class='form-control', label_col_size='col-sm-2', field_col_size='col-sm-10') -%}
+        {{ field.label(class_="{0} col-form-label".format(label_col_size)) }}
+        {% if id=='' %}
+            {% set id = field.id %}
+        {% endif %}
+        <div class="{{ field_col_size }}">
+            {{ field(class_=class, id=id, **kwargs) }}
+        </div>
+{%- endmacro %}
+
+
 {% macro render_submit_button(field, id='', class='form-control', col_size='col-sm-10', col_size_offset='col-sm-offset-2') -%}
     <div class="{{ '{0} {1}'.format(col_size, col_size_offset) }}">
         {{ field(
@@ -18,3 +30,30 @@
     </div>
 {%- endmacro %}
 
+
+{% macro render_requirements_form(form, action, method='POST', enctype='multipart/form-data') -%}
+    <form method="{{ method }}"  enctype="{{ enctype }}" action="{{ action }}">
+        {{ form.hidden_tag() }}
+        {% for field in form %}
+            {% if field.type == "StringField" or field.type == 'TextAreaField' %}
+                <div class="row">
+                    {{ render_text_input(field) }}
+                </div>
+                <br>
+            {% endif %}
+
+            {% if field.type == "SelectField" %}
+                <div class="row">
+                    {{ render_select_field(field) }}
+                </div>
+            <br>
+            {% endif %}
+        {% endfor %}
+
+        <div class="row">
+            {{ render_submit_button(form.submit) }}
+        </div>
+        <br>
+        <br>
+    </form>
+{%- endmacro %}

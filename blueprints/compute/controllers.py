@@ -9,7 +9,7 @@ default = Blueprint('default', __name__)
 dashboard = Blueprint('dashboard', __name__, url_prefix='/dashboard',
                       template_folder='../../templates', static_folder='../../static')
 compute = Blueprint('compute', __name__, url_prefix='/dashboard/compute',
-                    template_folder='../templates', static_folder='../static')
+                    template_folder='../templates', static_folder='../../static')
 
 
 @default.route('/')

@@ -1,11 +1,12 @@
 {% extends "layouts/sub_page_layout.html" %}
-{% from "macros/forms.html" import render_text_input, render_submit_button %}
+{% from "macros/forms.html" import render_text_input, render_submit_button, render_requirements_form %}
 
 {% block sub_pg_content %}
-    {% block sub_tittle %} <h3>Select a Team or Create a New One</h3> {% endblock %}
+    {% block sub_tittle %} <h4>Select a Team or Create a New One</h4> {% endblock %}
     <div class="container">
         {% block requirement_forms %}
             <!--Team Selection Dropdown Menu -->
+             <!--Todo Ask the user to choose between selecting a team and creating a new requirement. Once decided show the appropriate form -->
             <div class="row">
                 <div class="col-sm-12">
                     <div id="team-select-dropdown" class="dropdown">
@@ -14,6 +15,7 @@
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <!--Todo: dynamically query for options -->
+                            <li><a href="#">New Team</a></li>
                             <li><a href="#">GDN</a></li>
                             <li><a href="#">CIO</a></li>
                             <li><a href="#">External</a></li>
@@ -23,53 +25,34 @@
             </div>
             <br>
             <br>
-            <div class="row">
+            <div class="row" hidden="hidden">
                 <div class="col-sm-6">
                     <div id="team-form" class="form-group">
-                        <form method="POST" enctype="multipart/form-data" action="{{ url_for('compute.create_team') }}">
-                            {{ forms.create_team.hidden_tag() }}
-                            {% for field in forms.create_team %}
-                                {% if field.type == "StringField" or field.type == 'TextAreaField' %}
-                                    <div class="row">
-                                        {{ render_text_input(field) }}
-                                    </div>
-                                    <br>
-                                {% endif %}
-                            {% endfor %}
-
-                            <div class="row">
-                                {{ render_submit_button(forms.create_team.submit) }}
-                            </div>
-                            <br>
-                            <br>
-                        </form>
+                        <div id="bm-req-form" class="form-group">
+                             <h3>Create new Bare Metal Server Requirement</h3>
+                            {{ render_requirements_form(forms.create_physical, url_for('compute.create_team')) }}
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div id="team-form" class="form-group">
+                    <div id="vm-req-form" class="form-group">
+                        <h3>Create a new Team</h3>
+                        {{ render_requirements_form(forms.create_team, url_for('compute.create_team')) }}
 
-                        <form method="POST" enctype="multipart/form-data" action="{{ url_for('compute.create_team') }}">
-                            {{ forms.create_team.hidden_tag() }}
-                            {% for field in forms.create_virtual %}
-                                {% if field.type == "StringField" or field.type == 'TextAreaField' %}
-                                    <div class="row">
-                                        {{ render_text_input(field) }}
-                                    </div>
-                                    <br>
-                                {% endif %}
-                            {% endfor %}
-
-                            <div class="row">
-                                {{ render_submit_button(forms.create_virtual.submit) }}
-                            </div>
-                            <br>
-                            <br>
-                        </form>
+                        <h3>Create a new VM Requirement</h3>
+                        {{ render_requirements_form(forms.create_virtual, url_for('compute.create_team')) }}
                     </div>
                 </div>
+                <div class="container">
 
+                </div>
             </div>
+
         {% endblock requirement_forms %}
     </div>
 
+{% endblock %}
+
+{% block pg_specific_javascript %}
+    <script type="text/javascript" src="{{ url_for('compute.static', filename='js/custom/team-req.js') }}"></script>
 {% endblock %}
