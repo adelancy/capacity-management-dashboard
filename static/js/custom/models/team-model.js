@@ -1,6 +1,8 @@
 /**
  * Created by adrian on 11/7/16.
  */
-define(['root-model'], function (model) {
-    return model.set('url', '/data/teams');
+define(['custom/models/root-model'], function (model) {
+    console.log(model);
+    //return model.url('url', '/data/teams');
+    return model
 });

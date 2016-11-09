@@ -10,7 +10,7 @@ class CreateTeam(FlaskForm):
     name = StringField('Team Name', validators=[DataRequired()])
     group = StringField('Team Group')
     description = TextAreaField('Team Description')
-    submit = _submit
+    submit_team = _submit
 
 
 class CreateVirtualRequirements(FlaskForm):
@@ -22,7 +22,7 @@ class CreateVirtualRequirements(FlaskForm):
     vcpus = IntegerField('No of vCPUs', validators=[DataRequired()])
     ram = IntegerField('RAM (MB)', validators=[DataRequired()])
     # Number of VM Units will be calculated
-    submit = _submit
+    submit_vm_requirements = _submit
 
 
 class CreatePhysicalRequirements(FlaskForm):
@@ -45,7 +45,7 @@ class CreatePhysicalRequirements(FlaskForm):
     sfp_part_number = StringField('SFP Part Number')
     sfp_network_ports = StringField('Ports per SFP')
 
-    submit = _submit
+    submit_bm_requirements = _submit
 
 
 class GetForms(object):

@@ -2,7 +2,7 @@
  * Created by adrian on 11/7/16.
  */
 define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
-    var model = Backbone.Model.extend({
+    return Backbone.Model.extend({
 
         sync: function (method, model, options) {
             var _root = this;
@@ -13,6 +13,4 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             }
         }
     });
-
-    return model;
 });

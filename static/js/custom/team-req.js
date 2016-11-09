@@ -2,8 +2,9 @@
  * Created by adrian.p.delancy on 10/27/2016.
  */
 
-define(['jquery', 'underscore', 'backbone', 'models/team-model'], function ($, _, Backbone, TeamModel) {
+define(['custom/models/team-model'], function (TeamModel) {
     //Do setup work here
+
     var module = {
 
         init: function () {
@@ -21,6 +22,7 @@ define(['jquery', 'underscore', 'backbone', 'models/team-model'], function ($, _
 
         addButtonListeners: function () {
             $('#select-team-dropdown').change(this.selectButtonListener(this));
+            $('#create-team-form').find('form input:submit').on('submit', this.submitTeamForm);
         },
 
         showCreateTeamForm: function () {
@@ -45,8 +47,10 @@ define(['jquery', 'underscore', 'backbone', 'models/team-model'], function ($, _
             });
         },
 
-        saveNewTeam: function () {
-
+        submitTeamForm: function (event) {
+            event.preventDefault();
+            var data = $('#team-form form').serializeArray(); //Get the form data
+            window.console.log(data);
         }
     };
 

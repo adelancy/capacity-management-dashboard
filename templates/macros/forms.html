@@ -21,6 +21,9 @@
 
 
 {% macro render_submit_button(field, id='', class='form-control', col_size='col-sm-10', col_size_offset='col-sm-offset-2') -%}
+   {% if id=='' %}
+       {% set id = field.id %}
+   {% endif %}
     <div class="{{ '{0} {1}'.format(col_size, col_size_offset) }}">
         {{ field(
         class_="btn btn-primary",
@@ -49,11 +52,14 @@
             <br>
             {% endif %}
         {% endfor %}
-
-        <div class="row">
-            {{ render_submit_button(form.submit) }}
-        </div>
-        <br>
-        <br>
+        {% for field in form %}
+            {% if field.type == "SubmitField" %}
+                <div class="row">
+                    {{ render_submit_button(field) }}
+                </div>
+                <br>
+                <br>
+            {% endif %}
+        {% endfor %}
     </form>
 {%- endmacro %}
