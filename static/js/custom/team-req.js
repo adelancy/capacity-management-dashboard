@@ -9,7 +9,7 @@ define(['custom/models/team-model'], function (TeamModel) {
 
         init: function () {
             /**
-             * Perform the initial tasks to prepare the webpage
+             * Perform the initial tasks to prepare the webpage more comments
              */
             //Todo: Send a network request to get the list of teams created
 
