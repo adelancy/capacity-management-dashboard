@@ -11,6 +11,7 @@ require.config({
         'bootstrap': '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
         'underscore': '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min',
         'backbone': '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min',
+        'team-req': 'custom/team-req',
         //'async': 'js/libs/require/plugins/async',
     },
 
