@@ -12,8 +12,6 @@ define(['jquery', 'underscore', 'backbone'], function ($ ,_, Backbone) {
              * Perform the initial tasks to prepare the webpage more comments
              */
             //Todo: Send a network request to get the list of teams created
-             console.log('is this executed????');
-
             //Check if New Team is selected and display the Create Team form.
             if ($('#select-team-dropdown option:selected').attr('value') === 'New Team') {
                 this.showCreateTeamForm();
