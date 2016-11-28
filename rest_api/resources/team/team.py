@@ -1,6 +1,8 @@
 from rest_api.resources.base import BaseCollection
 from dbmodels.team.team import Team
-from rest_api.json_schemas.team import TeamSchema
+from dbmodels.team.virtual_requirements import VirtualRequirement
+from dbmodels.team.physical_requirements import PhysicalRequirement
+from rest_api.json_schemas.team import TeamSchema, PhysicalReqSchema, VMRequirementSchema
 
 
 class TeamCollection(BaseCollection):
@@ -22,8 +24,8 @@ class TeamCollection(BaseCollection):
 class VMRequirementsCollection(BaseCollection):
     def __init__(self):
         super(VMRequirementsCollection, self).__init__()
-        self.db_table = Team
-        self.resp_schema = TeamSchema
+        self.db_table = VirtualRequirement
+        self.resp_schema = VMRequirementSchema
         self.special_fields = ['team']
 
     def handle_special_fields(self, db_record, field, value, replace=False):
@@ -36,7 +38,7 @@ class VMRequirementsCollection(BaseCollection):
         parser.add_argument('hostname')
         parser.add_argument('vcpu')
         parser.add_argument('storage')
-        parser.add_argument('role')
+        parser.add_argument('vm-type')
         parser.add_argument('environment')
         parser.add_argument('cluster')
         parser.add_argument('ram')
@@ -47,8 +49,8 @@ class VMRequirementsCollection(BaseCollection):
 class BMRequirementsCollection(BaseCollection):
     def __init__(self):
         super(BMRequirementsCollection, self).__init__()
-        self.db_table = Team
-        self.resp_schema = TeamSchema
+        self.db_table = PhysicalRequirement
+        self.resp_schema = PhysicalReqSchema
         self.special_fields = ['team']
 
     def handle_special_fields(self, db_record, field, value, replace=False):

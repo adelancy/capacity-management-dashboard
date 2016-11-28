@@ -9,4 +9,4 @@ class Team(sqldb.Model):
     description = sqldb.Column(sqldb.Text())
 
     def __repr__(self):
-        return '<{0} {1}'.format(self.__class__.__name__, self.id)
+        return '<{0} {1}>'.format(self.__class__.__name__, self.id)

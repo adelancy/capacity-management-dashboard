@@ -1,12 +1,12 @@
 import json
 from datetime import datetime
 
-from flask import request
+from flask import request, current_app
 from flask_restful import Resource, reqparse
 
-from dbmodels.data_center.location import Location
+# from dbmodels.data_center.location import Location
 from extensions.sql_alchemy import sqldb
-from ..json_schemas.location import LocationSchema
+# from ..json_schemas.location import LocationSchema
 from ..util import output_json, handle_rest_error_response
 
 
@@ -48,6 +48,8 @@ class BaseCollection(Resource):
         try:
             self.add_post_patch_args(parser)
             data = self.parse_args(parser)
+            print data
+            current_app.logger.debug(data)
             db_record = self.create_update_db_reccord(data, self.db_table())
             resp = self.resp_schema().dump(db_record).data
             return resp, 201

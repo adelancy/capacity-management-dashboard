@@ -62,14 +62,14 @@ def add_restful_endpoints(api):
 
     api.add_resource(
         resources.team.VMRequirementsCollection,
-        '/{0}/vm-req'.format(PREFIX),
-        '/{0}/vm-req/<db_id>'.format(PREFIX),
+        '/{0}/vm-reqs'.format(PREFIX),
+        '/{0}/vm-reqs/<db_id>'.format(PREFIX),
         endpoint='vm-reqs-collection'
     )
 
     api.add_resource(
         resources.team.BMRequirementsCollection,
-        '/{0}/bm-req'.format(PREFIX),
-        '/{0}/bm-req/<db_id>'.format(PREFIX),
+        '/{0}/bm-reqs'.format(PREFIX),
+        '/{0}/bm-reqs/<db_id>'.format(PREFIX),
         endpoint='bm-reqs-collection'
     )

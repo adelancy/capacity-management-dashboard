@@ -1,9 +1,11 @@
-import os
 import datetime
 from flask import Blueprint, render_template, abort, redirect, url_for, request, jsonify
 from jinja2 import TemplateNotFound
 
 from ..compute.forms import requirements as req_forms
+from extensions.sql_alchemy import sqldb
+from dbmodels.team.team import Team
+
 
 default = Blueprint('default', __name__)
 dashboard = Blueprint('dashboard', __name__, url_prefix='/dashboard',
@@ -41,4 +43,12 @@ def create_team():
     if not submitted:
         return jsonify(message='Form data not submitted properly'), 400
     print form.data
+    try:
+        teamRecord = Team(name=form.data['name'], description=form.data['description'], group=form.data['group'])
+        sqldb.session.add(teamRecord)
+        sqldb.session.commit()
+        print teamRecord
+    except AttributeError as error:
+        print error
+        return jsonify(message='Form data not submitted properly'), 400
     return jsonify(message='Success'), 201

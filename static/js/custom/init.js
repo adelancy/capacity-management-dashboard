@@ -7,12 +7,12 @@ require.config({
     baseUrl: 'static/js',
 
     paths: {
-        'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',
-        'bootstrap': '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
-        'underscore': '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min',
-        'backbone': '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min',
+        'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min',
+        'bootstrap': 'https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min',
+        'underscore': 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min',
+        'backbone': 'https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min',
         'team-req': 'custom/team-req',
-        //'async': 'js/libs/require/plugins/async',
+        'async': 'libs/requirejs-plugins/async',
     },
 
     // The shim config allows us to configure dependencies for

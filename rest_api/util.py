@@ -9,7 +9,11 @@ def output_json(dict_data, code, headers=None):
 
 
 def handle_rest_error_response(error, api_name=None, status_code=500, code=None, headers=None):
-    error_resp = error.message.get('_schema', None)
+    try:
+        error_resp = error.message.get('_schema', None)
+    except AttributeError:
+        error_resp = False
+
     if error_resp:
         error_resp = dict(errors=error_resp)
     else:

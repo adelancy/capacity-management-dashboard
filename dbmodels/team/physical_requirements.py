@@ -1,7 +1,7 @@
 from extensions.sql_alchemy import sqldb
 
 
-class VirtualRequirement(sqldb.Model):
+class PhysicalRequirement(sqldb.Model):
     __tablename__ = 'physical_requirement'
     id = sqldb.Column(sqldb.Integer(), primary_key=True)
     name = sqldb.Column(sqldb.String(50))

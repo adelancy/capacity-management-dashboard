@@ -38,7 +38,7 @@
     <form method="{{ method }}"  enctype="{{ enctype }}" action="{{ action }}">
         {{ form.hidden_tag() }}
         {% for field in form %}
-            {% if field.type == "StringField" or field.type == 'TextAreaField' %}
+            {% if field.type == "StringField" or field.type == 'TextAreaField' or field.type == 'IntegerField' %}
                 <div class="row">
                     {{ render_text_input(field) }}
                 </div>

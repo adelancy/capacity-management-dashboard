@@ -1,4 +1,5 @@
-import os
+import logging
+from logging.handlers import RotatingFileHandler
 from flask import Flask
 from extensions import init_extensions
 from blueprints.compute import compute, default, dashboard
@@ -27,6 +28,27 @@ def create_app(config_filename=None, config_options_name=None):
         # Override base configuration parameters with more specific ones from a configuration file.
         app.config.from_pyfile(config_filename)
     return app
+
+
+def configure_logging(app):
+    if not app.debug:
+        logging.basicConfig(level=logging.ERROR)
+
+    file_handler = RotatingFileHandler(app.config['LOG_FILE'], maxBytes=500, backupCount=0)
+    sqlalchemy_logger = logging.getLogger('sqlalchemy')
+
+    # Set default logging level
+    sqlalchemy_logger.setLevel(logging.ERROR)
+
+    file_handler.setFormatter(
+        logging.Formatter(
+            '%(asctime)s %(levelname)s: %(message)s '
+            '[in %(pathname)s:%(lineno)d]'
+        )
+    )
+    # Add rotating file handler to the flask application logger
+    app.logger.addHandler(file_handler)
+    sqlalchemy_logger.addHandler(file_handler)
 
 if __name__ == "__main__":
     create_app().run()

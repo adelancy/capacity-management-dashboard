@@ -23,6 +23,12 @@ def clear_db():
 
 
 @manager.command
+def init_db():
+    sqldb.drop_all()
+    sqldb.create_all()
+
+
+@manager.command
 def add_location():
     location = loc.Location(city='Chicago', name='Chicago')
     sqldb.session.add(location)

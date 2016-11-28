@@ -6,6 +6,7 @@ _secret_key = os.urandom(24)
 
 class BaseConfig(object):
     PROJECT = 'UHA Requirements & Current State Dashboard'
+    LOG_FILE = 'app.log'
     DEBUG = False
     TESTING = False
     SECRET_KEY = _secret_key
