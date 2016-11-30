@@ -3,7 +3,7 @@
  */
 define(['./root-model'], function (Model) {
    return Model.extend({
-       urlRoot: '/data/bm-req',
+       urlRoot: '/data/bm-reqs',
        type: 'bm-req'
     });
 });

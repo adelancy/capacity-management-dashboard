@@ -16,11 +16,12 @@ class PhysicalRequirement(sqldb.Model):
     description = sqldb.Column(sqldb.Text())
     os_type = sqldb.Column(sqldb.String(50))
     env = sqldb.Column(sqldb.String(50))
+    deleted = sqldb.Column(sqldb.Boolean, default=False)
 
     team_id = sqldb.Column(sqldb.Integer(), sqldb.ForeignKey('team.id'))
     team = sqldb.relationship(
         'Team',
-        backref=sqldb.backref('virtual_requirements', lazy='dynamic')
+        backref=sqldb.backref('physical_requirement', lazy='dynamic')
     )
 
     # Many to One Relationship with Location Table

@@ -8,11 +8,12 @@ class VirtualRequirement(sqldb.Model):
     vm_type = sqldb.Column(sqldb.String(50))
     os_type = sqldb.Column(sqldb.String(50))
     cluster = sqldb.Column(sqldb.String(50))
-    vcpu = sqldb.Column(sqldb.Integer())
+    vcpus = sqldb.Column(sqldb.Integer())
     ram = sqldb.Column(sqldb.Integer())
-    vmunits = sqldb.Column(sqldb.Integer())
+    vm_units = sqldb.Column(sqldb.Integer())
     description = sqldb.Column(sqldb.Text())
     env = sqldb.Column(sqldb.String(50))
+    deleted = sqldb.Column(sqldb.Boolean, default=False)
 
     team_id = sqldb.Column(sqldb.Integer(), sqldb.ForeignKey('team.id'))
     team = sqldb.relationship(

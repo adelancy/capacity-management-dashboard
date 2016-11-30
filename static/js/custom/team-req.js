@@ -91,7 +91,7 @@ define(function (require) {
             event.preventDefault();
             //Todo: Get currently selected Team
             var teamID = $('#select-team-dropdown').attr('value'); //Todo: update so this returns the team ID.
-            var data = $('#team-form form').serializeArray(); //Get the form data
+            var data = $('#bm-req-form').find('form').serializeArray(); //Get the form data
             data.push({name: 'team-id', value: teamID});
             console.log(data);
             var bmReq = new BMRequirement();

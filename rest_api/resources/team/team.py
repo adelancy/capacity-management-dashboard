@@ -35,15 +35,18 @@ class VMRequirementsCollection(BaseCollection):
 
     @classmethod
     def add_post_patch_args(cls, parser):
+        parser.add_argument('name')
         parser.add_argument('hostname')
-        parser.add_argument('vcpu')
+        parser.add_argument('vcpus')
         parser.add_argument('storage')
-        parser.add_argument('vm-type')
+        parser.add_argument('vm-type', dest='vm_type')
+        parser.add_argument('os-type', dest='os_type')
         parser.add_argument('environment')
         parser.add_argument('cluster')
         parser.add_argument('ram')
         parser.add_argument('group')
         parser.add_argument('location')
+        parser.add_argument('team-id', dest='team')
 
 
 class BMRequirementsCollection(BaseCollection):

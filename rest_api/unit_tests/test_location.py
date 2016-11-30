@@ -78,7 +78,7 @@ class TestLocationCollection(TestCase):
 
     def create_app(self):
 
-        app = create_app(cfg.TestingConfig)
+        app = create_app(config_options_name='test')
         return app
 
     def setUp(self):

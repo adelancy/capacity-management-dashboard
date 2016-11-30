@@ -2,6 +2,11 @@
  * Created by adrian on 11/7/16.
  */
 define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
+    var dasherize = function(stringVal) { //Needed to conform to json key naming convention
+        "use strict";
+        return stringVal.replace("_", "-");
+    };
+
     return Backbone.Model.extend({
 
         setAttributesAsArray: function(attributes) {
@@ -11,7 +16,7 @@ define(['jquery', 'underscore', 'backbone'], function ($, _, Backbone) {
             "use strict";
             var _root = this;
              _.each(attributes, function(element){
-                _root.set(element.name, element.value);
+                _root.set(dasherize(element.name), element.value);
             });
         },
 

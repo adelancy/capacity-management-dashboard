@@ -34,14 +34,14 @@ class BaseCollection(Resource):
                     db_records = self.db_table.query.filter_by(**filters).\
                         filter(self.db_table.deleted.isnot(True)).all()
                     return self.resp_schema(many=True).dump(db_records).data, 200
-                # Get all locations
+                # Get all records
                 db_records = self.db_table.query.filter(self.db_table.deleted.isnot(True)).all()
                 return self.resp_schema(many=True).dump(db_records).data
             db_record = self.get_db_record(db_id)
             resp = self.resp_schema().dump(db_record).data
             return resp, 200
         except Exception as error:
-            return handle_rest_error_response(error, 'Location Collection')
+            return handle_rest_error_response(error, 'Base Collection')
 
     def post(self):
         parser = reqparse.RequestParser()
@@ -54,7 +54,7 @@ class BaseCollection(Resource):
             resp = self.resp_schema().dump(db_record).data
             return resp, 201
         except Exception as error:
-            return handle_rest_error_response(error, 'Locations Collection')
+            return handle_rest_error_response(error, 'Base Collection')
 
     def patch(self, db_id):
         parser = reqparse.RequestParser()

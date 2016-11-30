@@ -17,10 +17,12 @@ class CreateVirtualRequirements(FlaskForm):
     name = StringField('Requirement Name', validators=[DataRequired()])
     description = TextAreaField('Description', validators=[DataRequired()])
     vm_type = StringField('VM Type')
+    environment = StringField('Environment')
     os_type = StringField('OS Type')
     cluster = StringField('Cluster Name')
     vcpus = IntegerField('No of vCPUs', validators=[DataRequired()])
     ram = IntegerField('RAM (MB)', validators=[DataRequired()])
+    storage = IntegerField('Disk Space (GB)', validators=[DataRequired()])
     # Number of VM Units will be calculated
     submit_vm_requirements = _submit
 

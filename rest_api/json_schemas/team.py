@@ -49,13 +49,17 @@ class PhysicalReqSchema(Schema):
 
 class VMRequirementSchema(Schema):
     id = fields.Int()
+    name = fields.String()
     hostname = fields.String()
-    vcpu = fields.Int()
+    vcpus = fields.Int()
     ram = fields.Int()
     storage = fields.Int()
     role = fields.String()
     environment = fields.String()
     cluster = fields.String()
+    os_type = fields.String()
+    vm_type = fields.String()
+    vm_units = fields.String()
 
     team = Relationship(
         schema=TeamSchema,
