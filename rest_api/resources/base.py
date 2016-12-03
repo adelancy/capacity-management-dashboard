@@ -103,12 +103,12 @@ class BaseCollection(Resource):
 
     def create_update_db_reccord(self, data, db_record):
         for k, v in data.items():
-            if k in self.special_fields:
-                self.handle_special_fields(db_record, k, v)
             try:
                 setattr(db_record, k, v)
-            except AttributeError:
-                pass  # Todo: Log the error
+            except AttributeError, e:
+                current_app.logger.warn(e)
+            if k in self.special_fields:
+                self.handle_special_fields(db_record, k, v)
         db_record.last_modified_dt = datetime.utcnow()
         sqldb.session.add(db_record)
         self.commit()

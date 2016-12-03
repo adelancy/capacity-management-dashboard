@@ -1,6 +1,7 @@
 from marshmallow_jsonapi import fields, Schema
 from marshmallow_jsonapi.flask import Relationship
 from rest_api.util import dasherize
+from location import LocationSchema
 
 
 class TeamSchema(Schema):
@@ -21,7 +22,6 @@ class PhysicalReqSchema(Schema):
     model = fields.String()
     vendor = fields.String()
     part_number = fields.String()
-    serial_number = fields.String()
     procs = fields.Int(allow_none=True)
     description = fields.String(allow_none=True)
     sfp_type = fields.String()
@@ -30,14 +30,20 @@ class PhysicalReqSchema(Schema):
     mgmt_ports = fields.Int()
     group = fields.String(allow_none=True)  # Todo: replace with a team relationship
     ram = fields.Int(allow_none=True)
-    storage_capacity = fields.Int(allow_none=True)
+    storage = fields.Int(allow_none=True)
     vm_count = fields.Int(allow_none=True)
-    os_type = fields.String(allow_none=True)
+    hypervisor = fields.String(allow_none=True)
     env = fields.String(allow_none=True)
 
     team = Relationship(
         schema=TeamSchema,
         type_='team',
+        include_resource_linkage=True
+    )
+
+    location = Relationship(
+        schema=LocationSchema,
+        type_='location',
         include_resource_linkage=True
     )
 

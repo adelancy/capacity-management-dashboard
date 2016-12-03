@@ -5,16 +5,16 @@ class PhysicalRequirement(sqldb.Model):
     __tablename__ = 'physical_requirement'
     id = sqldb.Column(sqldb.Integer(), primary_key=True)
     name = sqldb.Column(sqldb.String(50))
+    description = sqldb.Column(sqldb.Text())
     model = sqldb.Column(sqldb.String(50))
     vendor = sqldb.Column(sqldb.String(50))
     part_number = sqldb.Column(sqldb.String(50))
     procs = sqldb.Column(sqldb.Integer())
     ram = sqldb.Column(sqldb.Integer())
-    storage_capacity = sqldb.Column(sqldb.Integer())  # GB
+    storage = sqldb.Column(sqldb.Integer())  # GB
     storage_type = sqldb.Column(sqldb.String(50))
     rack_units = sqldb.Column(sqldb.Integer())
-    description = sqldb.Column(sqldb.Text())
-    os_type = sqldb.Column(sqldb.String(50))
+    hypervisor = sqldb.Column(sqldb.String(50))
     env = sqldb.Column(sqldb.String(50))
     deleted = sqldb.Column(sqldb.Boolean, default=False)
 
